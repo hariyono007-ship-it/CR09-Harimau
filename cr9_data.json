@@ -207,5 +207,117 @@
       "haulingDtRows": [],
       "savedAt": "2026-05-03T15:49:20.117Z"
     }
+  },
+  "2026-05-02": {
+    "A": {
+      "date": "2026-05-02",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3210101.75,
+      "bwStop": 3211321.25,
+      "tonnage": 1219.5,
+      "tph": 696.86,
+      "bwRows": [
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3210101.75,
+          "bwStop": 3211321.25,
+          "tonnage": 1219.5,
+          "tph": 696.86,
+          "jam": ""
+        }
+      ],
+      "hauling": 6978.4800000000005,
+      "source": "PLK48, PLK48",
+      "bsRows": [
+        {
+          "hauling": 532.6,
+          "source": "PLK48",
+          "note": "TBCT 1 NORTH 1"
+        },
+        {
+          "hauling": 6445.88,
+          "source": "PLK48",
+          "note": "TBCT 1 SOUTH 5 B"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 0.92,
+      "bd": 9.33,
+      "ops": 1.75,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,40",
+          "dur": 0.67,
+          "desc": "P5M",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,40",
+          "start": "16,00",
+          "dur": 9.33,
+          "desc": "",
+          "code": "900",
+          "delayDesJPC": "Repair (Scheduled) - Shutdown Plan",
+          "descriptions": "Delay dikarenakan scheduled maintenance"
+        },
+        {
+          "stop": "16,15",
+          "start": "16,20",
+          "dur": 0.08,
+          "desc": "",
+          "code": "784",
+          "delayDesJPC": "Stand By JPC - Metal Detector",
+          "descriptions": "Belt conv stop akibat metal detector tripped"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,40",
+          "dur": 0.67,
+          "desc": "P5M",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "CHANGE SHIFT",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-03T22:00:29.812Z"
+    }
   }
 }
