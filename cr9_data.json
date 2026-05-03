@@ -25,5 +25,97 @@
       "haulingDtRows": [],
       "savedAt": "2026-05-03T15:34:47.940Z"
     }
+  },
+  "2026-05-01": {
+    "A": {
+      "date": "2026-05-01",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3199482.25,
+      "bwStop": 3199625.25,
+      "tonnage": 3167.5,
+      "tph": 731.52,
+      "bwRows": [
+        {
+          "source": "J6 PLK 48",
+          "bwStart": 3199482.25,
+          "bwStop": 3199625.25,
+          "tonnage": 143,
+          "tph": 33.03,
+          "jam": ""
+        },
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3199625.25,
+          "bwStop": 3202649.75,
+          "tonnage": 3024.5,
+          "tph": 698.5,
+          "jam": ""
+        }
+      ],
+      "hauling": 4555.219999999999,
+      "source": "PLK48, PLK48",
+      "bsRows": [
+        {
+          "hauling": 279.02,
+          "source": "PLK48",
+          "note": "TBCT 1 NORTH 1"
+        },
+        {
+          "hauling": 4276.2,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 2.67,
+      "bd": 5,
+      "ops": 4.33,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,30",
+          "dur": 0.5,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,30",
+          "start": "11,30",
+          "dur": 5,
+          "desc": "",
+          "code": "855",
+          "delayDesJPC": "Repair (Scheduled) - Kalibrasi Beltweigher / Trouble Electrical - Kalibrasi Beltweigher",
+          "descriptions": "Delay dikarenakan kalibrasi weigher"
+        },
+        {
+          "stop": "11,30",
+          "start": "13,30",
+          "dur": 2,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        }
+      ],
+      "haulingDtRows": [],
+      "savedAt": "2026-05-03T15:43:33.931Z"
+    }
   }
 }
