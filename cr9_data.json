@@ -318,6 +318,147 @@
         }
       ],
       "savedAt": "2026-05-03T22:00:29.812Z"
+    },
+    "B": {
+      "date": "2026-05-02",
+      "shift": "B",
+      "pit": "J6+J8",
+      "seam": "PLK48",
+      "bwStart": 3211321.25,
+      "bwStop": 3214714.5,
+      "tonnage": 7259.05,
+      "tph": 751.45,
+      "bwRows": [
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3211321.25,
+          "bwStop": 3214714.5,
+          "tonnage": 3393.25,
+          "tph": 351.27,
+          "jam": ""
+        },
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3214714.5,
+          "bwStop": 3218580.3,
+          "tonnage": 3865.8,
+          "tph": 400.19,
+          "jam": ""
+        }
+      ],
+      "hauling": 6617.120000000001,
+      "source": "PLK48, PLK48, PLK48",
+      "bsRows": [
+        {
+          "hauling": 1604.64,
+          "source": "PLK48",
+          "note": "TBCT 1 NORTH 1"
+        },
+        {
+          "hauling": 118.84,
+          "source": "PLK48",
+          "note": "TBCT 1 SOUTH 5B"
+        },
+        {
+          "hauling": 4893.64,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        }
+      ],
+      "supvFP": "SUTRAN HENDAR",
+      "supvCR": "KURNIA",
+      "ewh": 12,
+      "stb": 1.97,
+      "bd": 0.37,
+      "ops": 9.66,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,40",
+          "dur": 0.67,
+          "desc": "P5M+P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "23,20",
+          "start": "23,28",
+          "dur": 0.13,
+          "desc": "GANTI PRODUCT",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "BREAK",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "2,07",
+          "start": "2,26",
+          "dur": 0.32,
+          "desc": "CHAIN FEEDER TRIP",
+          "code": "860",
+          "delayDesJPC": "Trouble Electrical - Sensor Failure / Trouble Mechanical - Chain Feeder",
+          "descriptions": "Plant berhenti dikarenakan sensor atau chain feeder broken"
+        },
+        {
+          "stop": "5,32",
+          "start": "5,35",
+          "dur": 0.05,
+          "desc": "",
+          "code": "885",
+          "delayDesJPC": "Repair (Scheduled) - Roller / Trouble Mechanical - Roller",
+          "descriptions": "Roller stuck, shell roller lepas dari shaft nya"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "GANTI SHIFT",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,30",
+          "dur": 0.5,
+          "desc": "P5M + P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "SHIFT CHANGE",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-03T22:41:56.367Z"
     }
   }
 }
