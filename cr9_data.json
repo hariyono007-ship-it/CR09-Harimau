@@ -1,0 +1,29 @@
+{
+  "2026-05-03": {
+    "A": {
+      "date": "2026-05-03",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 0,
+      "bwStop": 0,
+      "tonnage": 0,
+      "tph": 0,
+      "bwRows": [],
+      "hauling": 0,
+      "source": "",
+      "bsRows": [],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 0,
+      "bd": 0,
+      "ops": 0,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [],
+      "haulingDtRows": [],
+      "savedAt": "2026-05-03T15:34:47.940Z"
+    }
+  }
+}
