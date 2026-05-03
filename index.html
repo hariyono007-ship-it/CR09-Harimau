@@ -752,14 +752,14 @@ function dismissInstallBanner() {
       <span id="chip-label"></span>
     </div>
     <div id="admin-tools" style="display:none;align-items:center;gap:8px">
-      <button class="btn-data btn-save" onclick="saveHTMLWithData()" title="Simpan file HTML dengan data tertanam">💾 Simpan File</button>
-      <button class="btn-data btn-load" onclick="document.getElementById('_fileInput').click()" title="Load data dari file HTML backup">📂 Load Data</button>
+      <!-- Simpan File & Load Data disembunyikan pada mode GitHub Pages -->
       <button class="btn-data" onclick="openExcelModal()" title="Export ke Excel" style="background:linear-gradient(135deg,#1a5c1a,#2ea82e);color:#fff">📊 Export Excel</button>
       <button class="btn-data" onclick="pullFromSheets()" title="Tarik semua data dari Cloud" style="background:linear-gradient(135deg,#1a4a8a,#2d7fd4);color:#fff">☁ Tarik dari Cloud</button>
       <button class="btn-data" onclick="openCloudSettings()" title="Konfigurasi Cloud Storage" style="background:linear-gradient(135deg,#3a2060,#6d3dcc);color:#fff">⚙ Cloud Setup</button>
       <input type="file" id="_fileInput" accept=".json,.html" style="display:none" onchange="loadDataFromFile(event)">
       <div id="gs-status-dot" style="width: 8px; height: 8px; border-radius: 50%; background: var(--ok);" title="Status Google Sheets"></div>
-      <span id="gs-status-label" style="font-size: 11px; color: var(--ok);">Sheets: Terhubung ✓</span>
+      <span id="gs-status-label" style="font-size: 11px; color: var(--ok);">GitHub: Terhubung ✓</span>
+      <span id="realtime-badge" style="display:none;font-size:10px;background:rgba(39,199,122,0.15);border:1px solid var(--ok);color:var(--ok);border-radius:10px;padding:2px 8px;letter-spacing:0.5px">🟢 LIVE</span>
       <!-- Tombol ⚙ Google Sheets disembunyikan — URL sudah tertanam permanen -->
       <button class="nav-btn" onclick="openGSSettings()" style="font-size:11px;padding:6px 12px;display:none">⚙ Google Sheets</button>
     </div>
@@ -774,7 +774,7 @@ function dismissInstallBanner() {
 <div id="cloud-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;align-items:center;justify-content:center">
   <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:28px;width:560px;max-width:95vw">
     <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">☁ Konfigurasi GitHub Repository</div>
-    <div style="font-size:12px;color:var(--text-dim);margin-bottom:20px">Data disimpan sebagai file JSON di repo GitHub — Admin push otomatis, User pull otomatis saat buka file.</div>
+    <div style="font-size:12px;color:var(--text-dim);margin-bottom:20px">✅ Data tersimpan di GitHub — Admin input → otomatis push ke cloud → User buka link yang sama selalu dapat data terbaru secara <b style="color:var(--ok)">real-time</b>.</div>
     <div class="field" style="margin-bottom:12px">
       <label>GitHub Username</label>
       <input type="text" id="cloud-username-input" placeholder="hariyono007-ship-it" style="font-size:13px;font-family:'DM Mono',monospace">
@@ -789,12 +789,13 @@ function dismissInstallBanner() {
     </div>
     <div style="background:var(--coal-light);border-radius:8px;padding:14px;margin-bottom:18px;font-size:12px;color:var(--text-dim);line-height:1.9">
       <div style="color:var(--accent);font-weight:700;margin-bottom:6px">📋 Cara setup (1x saja):</div>
-      <div>1. Di GitHub → klik <b style="color:var(--text)">New</b> → nama repo: <code style="color:var(--accent)">CR09-Harimau</code> → <b style="color:var(--text)">Create repository</b></div>
-      <div>2. Buka <b style="color:var(--text)">github.com/settings/tokens</b> → <b style="color:var(--text)">Generate new token (classic)</b></div>
-      <div>3. Centang scope: ✅ <b style="color:var(--ok)">repo</b> → Generate → copy token</div>
-      <div>4. Isi form di atas: Username = <code style="color:var(--accent)">hariyono007-ship-it</code>, Repo = <code style="color:var(--accent)">CR09-Harimau</code>, Token</div>
-      <div>5. Klik <b style="color:var(--ok)">Simpan & Test</b> → lalu klik <b style="color:var(--accent)">💾 Simpan File</b></div>
-      <div style="margin-top:6px;color:var(--warn)">⚠ Token hanya digunakan Admin untuk push. User cukup buka file tanpa token (repo public) atau dengan token yang sama (repo private).</div>
+      <div>1. Buat repo GitHub: <b style="color:var(--text)">New</b> → nama: <code style="color:var(--accent)">CR09-Harimau</code> → pilih <b style="color:var(--ok)">Public</b> → Create</div>
+      <div>2. Aktifkan <b style="color:var(--text)">GitHub Pages</b>: Settings repo → Pages → Branch: main → Save</div>
+      <div>3. Upload <code style="color:var(--accent)">index.html</code> ke root repo (sekali saja)</div>
+      <div>4. Buat token: <b style="color:var(--text)">github.com/settings/tokens</b> → Generate new token (classic) → centang ✅ <b style="color:var(--ok)">repo</b> → copy</div>
+      <div>5. Isi form di atas lalu klik <b style="color:var(--ok)">Simpan &amp; Test Koneksi</b></div>
+      <div style="margin-top:8px;padding:8px;background:rgba(39,199,122,0.08);border-radius:6px;border:1px solid rgba(39,199,122,0.3)">🔗 Link permanen User: <code style="color:var(--ok)">https://[username].github.io/CR09-Harimau/</code></div>
+      <div style="margin-top:6px;color:var(--warn)">⚠ Token hanya untuk Admin push. User buka link GitHub Pages — data update otomatis tiap 30 detik.</div>
     </div>
     <div style="display:flex;gap:10px">
       <button class="btn btn-primary" onclick="saveCloudSettings()">💾 Simpan &amp; Test Koneksi</button>
@@ -2199,6 +2200,15 @@ const GITHUB_API_BASE = 'https://api.github.com';
 const CR9_DATA_FILENAME = 'cr9_data.json';
 
 function getCloudConfig() {
+  // 1. Coba dari localStorage (prioritas utama — untuk GitHub Pages hosting)
+  try {
+    const ls = localStorage.getItem('cr9_cloud_config');
+    if (ls) {
+      const parsed = JSON.parse(ls);
+      if (parsed && parsed.username) return parsed;
+    }
+  } catch(e) {}
+  // 2. Fallback: dari embedded script tag (backward compat)
   try {
     const raw = document.getElementById('cr9-cloud-config') &&
                 document.getElementById('cr9-cloud-config').textContent;
@@ -2210,12 +2220,27 @@ function getCloudConfig() {
 }
 
 function saveCloudConfig(cfg) {
+  // Simpan ke localStorage agar tetap ada saat halaman di-refresh
+  try { localStorage.setItem('cr9_cloud_config', JSON.stringify(cfg)); } catch(e) {}
+  // Juga update embedded tag (backward compat)
   const el = document.getElementById('cr9-cloud-config');
   if (el) el.textContent = JSON.stringify(cfg);
 }
 
 function getDB() {
   if (_dbCache !== null) return _dbCache;
+  // 1. Coba dari localStorage (data yang sudah di-pull dari cloud)
+  try {
+    const ls = localStorage.getItem('cr9_db_cache');
+    if (ls) {
+      const parsed = JSON.parse(ls);
+      if (parsed && typeof parsed === 'object' && Object.keys(parsed).length > 0) {
+        _dbCache = parsed;
+        return _dbCache;
+      }
+    }
+  } catch(e) {}
+  // 2. Fallback: dari embedded script tag
   try {
     const store = document.getElementById('cr9-data-store');
     if (store && store.textContent.trim() && store.textContent.trim() !== '{}') {
@@ -2228,6 +2253,8 @@ function getDB() {
 
 function setDB(db) {
   _dbCache = db;
+  // Simpan ke localStorage agar data tetap ada saat refresh
+  try { localStorage.setItem('cr9_db_cache', JSON.stringify(db)); } catch(e) {}
   const inline = document.getElementById('cr9-data-store');
   if (inline) inline.textContent = JSON.stringify(db);
 }
@@ -2497,15 +2524,34 @@ window.onload = async function() {
   if (slideBar) slideBar.style.display = 'none';
   if (slideProg) slideProg.style.display = 'none';
 
-  // Auto-pull dari cloud (JSONBin) jika sudah dikonfigurasi → merge & update UI
+  // ── Auto-pull dari GitHub setiap kali halaman dibuka ────────────────────
   const cfg = getCloudConfig();
   if (cfg.username) {
+    // Sudah dikonfigurasi → pull data terbaru dari cloud
     const ok = await loadAllFromSheets();
     if (ok) {
       buildDashMonths();
       renderDashboard();
+      buildHistMonths(); renderHistory();
     }
+    // Auto-refresh setiap 30 detik agar User selalu lihat data terbaru
+    setInterval(async function() {
+      const cloudDb = await pullFromCloud();
+      if (cloudDb && typeof cloudDb === "object" && Object.keys(cloudDb).length > 0) {
+        const merged = { ...getDB(), ...cloudDb };
+        setDB(merged);
+        buildDashMonths(); renderDashboard();
+        buildMTDMonths(); renderMTD();
+        const dailyDate = document.getElementById("daily-date").value;
+        if (dailyDate) renderDaily();
+        buildHistMonths(); renderHistory();
+        // Flash LIVE badge
+        var badge = document.getElementById('realtime-badge');
+        if (badge) { badge.style.display = 'inline'; badge.style.opacity = '0.5'; setTimeout(function(){ badge.style.opacity = '1'; }, 300); }
+      }
+    }, 30000);
   }
+  window._cloudConfigChecked = true;
 };
 
 function setupAutoCalc() {
@@ -2825,10 +2871,10 @@ async function saveShift() {
     if (ok) {
       showToast('✅ Shift ' + (shift === 'A' ? 'Day' : 'Night') + ' ' + date + ' tersimpan & terkirim ke cloud!');
     } else {
-      showToast('⚠ Shift tersimpan di file, tapi gagal kirim ke cloud. Klik 💾 Simpan File untuk backup.', true);
+      showToast('⚠ Shift tersimpan lokal, tapi gagal kirim ke cloud. Cek koneksi & Cloud Setup.', true);
     }
   } else {
-    showToast('✓ Shift ' + (shift === 'A' ? 'Day' : 'Night') + ' ' + date + ' tersimpan. Klik 💾 Simpan File untuk bagikan.', false);
+    showToast('✓ Shift ' + (shift === 'A' ? 'Day' : 'Night') + ' ' + date + ' tersimpan & dikirim ke cloud! User dapat melihat data terbaru.', false);
   }
 }
 
@@ -4455,8 +4501,22 @@ async function saveCloudSettings() {
     saveCloudConfig({ username, repo, token });
     updateCloudStatusBar(true);
     resEl.style.color = 'var(--ok)';
-    resEl.textContent = `✓ Repo ${username}/${repo} ditemukan! Konfigurasi tersimpan.`;
-    setTimeout(closeCloudSettings, 1800);
+    resEl.textContent = '✓ Repo ' + username + '/' + repo + ' ditemukan! Konfigurasi tersimpan. Menarik data...';
+    // Langsung pull data dari cloud setelah konfigurasi berhasil
+    setTimeout(async function() {
+      closeCloudSettings();
+      const cloudDb = await pullFromCloud();
+      if (cloudDb && typeof cloudDb === 'object' && Object.keys(cloudDb).length > 0) {
+        const merged = { ...getDB(), ...cloudDb };
+        setDB(merged);
+        buildDashMonths(); renderDashboard();
+        buildMTDMonths(); renderMTD();
+        buildHistMonths(); renderHistory();
+        showToast('✅ Konfigurasi tersimpan & data berhasil ditarik dari cloud!');
+      } else {
+        showToast('✅ Konfigurasi tersimpan! Belum ada data di cloud.');
+      }
+    }, 1200);
   } catch(err) {
     resEl.style.color = 'var(--danger)';
     resEl.textContent = '✗ Gagal: ' + err.message;
@@ -4475,8 +4535,10 @@ function updateCloudStatusBar(ok) {
     lbl.style.color = 'var(--text-muted)';
   } else if (ok === true) {
     dot.style.background = 'var(--ok)';
-    lbl.textContent = `GitHub: ${cfg.username}/${cfg.repo} ✓`;
+    lbl.textContent = 'GitHub: ' + cfg.username + '/' + cfg.repo + ' ✓';
     lbl.style.color = 'var(--ok)';
+    var badge = document.getElementById('realtime-badge');
+    if (badge) badge.style.display = 'inline';
   } else if (ok === false) {
     dot.style.background = 'var(--danger)';
     lbl.textContent = 'GitHub: Error koneksi';
@@ -5510,6 +5572,14 @@ function applyRole(role) {
     // show Input Laporan nav (desktop + mobile)
     document.getElementById('nav-btn-input').style.display = 'inline-flex';
     if (mobInput) mobInput.style.display = 'flex';
+    // Jika cloud belum dikonfigurasi, tampilkan popup setup otomatis
+    setTimeout(function() {
+      var cfg = getCloudConfig();
+      if (!cfg.username) {
+        if (typeof openCloudSettings === 'function') openCloudSettings();
+        if (typeof showToast === 'function') showToast('⚙ Silakan konfigurasi GitHub Repository terlebih dahulu!', true);
+      }
+    }, 400);
   } else {
     dot.style.background = 'var(--blue)';
     lbl.textContent = '👤 User: USER';
