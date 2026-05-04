@@ -65,7 +65,7 @@
           "stop": "7,38",
           "start": "15,23",
           "dur": 7.75,
-          "desc": "BEARING SECONDARY CRUSHER BROKEN",
+          "desc": "",
           "code": "862",
           "delayDesJPC": "Trouble Mechanical - Bearing",
           "descriptions": "Bearing broken"
@@ -109,7 +109,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-04T01:40:46.248Z"
+      "savedAt": "2026-05-04T02:28:30.232Z"
     },
     "B": {
       "date": "2026-05-03",
