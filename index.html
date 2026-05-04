@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)file:///C:/Users/HP/Downloads/index%20(74).html -->
+<!-- saved from url=(0047)file:///C:/Users/HP/Downloads/index%20(77).html -->
 <html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- PWA META TAGS -->
@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="file:///C:/Users/HP/Downloads/icon-192.png">
 
 <title>CR09 Harimau</title>
-<link href="./index_files/css2" rel="stylesheet">
+<link href="file:///C:/Users/HP/Downloads/index_files/css2" rel="stylesheet">
 
 <!-- SERVICE WORKER REGISTRATION -->
 <script>
@@ -710,7 +710,7 @@ function dismissInstallBanner() {
       <button class="login-type-tab active" id="tab-admin" onclick="switchLoginTab(&#39;admin&#39;)">🔑 Admin</button>
       <button class="login-type-tab" id="tab-user" onclick="switchLoginTab(&#39;user&#39;)">👤 User</button>
     </div>
-    <div id="login-error" class="login-error">Username atau password salah!</div>
+    <div id="login-error" class="login-error" style="display: none;">Username atau password salah!</div>
     <div class="login-field">
       <label>Username</label>
       <input type="text" id="login-username" placeholder="Masukkan username" autocomplete="username" onkeydown="if(event.key===&#39;Enter&#39;)document.getElementById(&#39;login-password&#39;).focus()">
@@ -720,7 +720,7 @@ function dismissInstallBanner() {
       <input type="password" id="login-password" placeholder="Masukkan password" autocomplete="current-password" onkeydown="if(event.key===&#39;Enter&#39;)doLogin()">
     </div>
     <button class="login-btn login-btn-admin" id="login-btn" onclick="doLogin()">Masuk</button>
-    <div class="login-badge" id="login-hint-admin">
+    <div class="login-badge" id="login-hint-admin" style="display: flex;">
       <span class="badge-icon">🛡</span>
       <span>Admin dapat mengakses seluruh fitur termasuk Input Laporan</span>
     </div>
@@ -741,9 +741,9 @@ function dismissInstallBanner() {
     </div>
   </div>
   <div class="topbar-nav">
-    <button class="nav-btn" onclick="showPage(&#39;dashboard&#39;)">📊 Dashboard</button>
+    <button class="nav-btn active" onclick="showPage(&#39;dashboard&#39;)">📊 Dashboard</button>
     <button class="nav-btn" id="nav-btn-input" onclick="showPage(&#39;input&#39;)" style="display: inline-flex;">Input Laporan</button>
-    <button class="nav-btn active" onclick="showPage(&#39;daily&#39;)">Daily Report</button>
+    <button class="nav-btn" onclick="showPage(&#39;daily&#39;)">Daily Report</button>
     <button class="nav-btn" onclick="showPage(&#39;mtd&#39;)">Month to Date</button>
     <button class="nav-btn" onclick="showPage(&#39;history&#39;)">🗂 History</button>
   </div>
@@ -758,8 +758,8 @@ function dismissInstallBanner() {
       <button class="btn-data" onclick="pullFromSheets()" title="Tarik semua data dari Cloud" style="background:linear-gradient(135deg,#1a4a8a,#2d7fd4);color:#fff">☁ Tarik dari Cloud</button>
       <button class="btn-data" onclick="openCloudSettings()" title="Konfigurasi Cloud Storage" style="background:linear-gradient(135deg,#3a2060,#6d3dcc);color:#fff">⚙ Cloud Setup</button>
       <input type="file" id="_fileInput" accept=".json,.html" style="display:none" onchange="loadDataFromFile(event)">
-      <div id="gs-status-dot" style="width: 8px; height: 8px; border-radius: 50%; background: var(--ok);" title="Status Google Sheets"></div>
-      <span id="gs-status-label" style="font-size: 11px; color: var(--ok);">GitHub: hariyono007-ship-it/CR09-Harimau ✓</span>
+      <div id="gs-status-dot" style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);" title="Status Google Sheets"></div>
+      <span id="gs-status-label" style="font-size: 11px; color: var(--accent);">GitHub: hariyono007-ship-it/CR09-Harimau</span>
       <span id="realtime-badge" style="display: inline; font-size: 10px; background: rgba(39, 199, 122, 0.15); border: 1px solid var(--ok); color: var(--ok); border-radius: 10px; padding: 2px 8px; letter-spacing: 0.5px;">🟢 LIVE</span>
       <!-- Tombol ⚙ Google Sheets disembunyikan — URL sudah tertanam permanen -->
       <button class="nav-btn" onclick="openGSSettings()" style="font-size:11px;padding:6px 12px;display:none">⚙ Google Sheets</button>
@@ -769,7 +769,7 @@ function dismissInstallBanner() {
 </div>
 
 <!-- Status bar load dari Google Sheets -->
-<div id="gs-load-status" style="display:none;background:rgba(39,199,122,0.12);border:1px solid var(--ok);color:var(--ok);font-size:12px;font-family:&#39;Barlow Condensed&#39;,sans-serif;letter-spacing:0.5px;padding:6px 20px;text-align:center;position:sticky;top:60px;z-index:99;"></div>
+<div id="gs-load-status" style="display: none; background: rgba(39, 199, 122, 0.12); border: 1px solid var(--ok); color: var(--ok); font-size: 12px; font-family: &quot;Barlow Condensed&quot;, sans-serif; letter-spacing: 0.5px; padding: 6px 20px; text-align: center; position: sticky; top: 60px; z-index: 99;">✓ Data dimuat dari cloud (3 hari)</div>
 
 
 <div id="cloud-modal" style="display: none; position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.7); z-index: 999; align-items: center; justify-content: center;">
@@ -809,7 +809,7 @@ function dismissInstallBanner() {
 <div class="main">
 
 
-<div class="page" id="page-dashboard">
+<div class="page active" id="page-dashboard">
 
   
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:12px">
@@ -1090,6 +1090,14 @@ function dismissInstallBanner() {
     <td><input type="number" placeholder="0" step="0.01" class="bw-tph-inp" style="width:100px;font-family:&#39;DM Mono&#39;,monospace;color:var(--text-dim)" readonly="" value=""></td>
     <td><input type="text" placeholder="06:00 - 18:00" class="wide bw-jam-inp" style="width:130px" value=""></td>
     <td><button class="del-btn" onclick="delBWRow(this)">✕</button></td>
+  </tr><tr>
+    <td><input type="text" placeholder="Source (misal: PLGLS)" class="wide bw-source-inp" value=""></td>
+    <td><input type="number" placeholder="0" step="0.01" class="bw-start-inp" oninput="calcBWRow(this)" style="width:130px;font-family:&#39;DM Mono&#39;,monospace" value=""></td>
+    <td><input type="number" placeholder="0" step="0.01" class="bw-stop-inp" oninput="calcBWRow(this)" style="width:130px;font-family:&#39;DM Mono&#39;,monospace" value=""></td>
+    <td><input type="number" placeholder="0" step="0.01" class="bw-tonnage-inp" oninput="calcBWTphFromTonnage(this)" style="width:120px;font-family:&#39;DM Mono&#39;,monospace;border-color:var(--accent);background:rgba(245,166,35,0.05)" value=""></td>
+    <td><input type="number" placeholder="0" step="0.01" class="bw-tph-inp" style="width:100px;font-family:&#39;DM Mono&#39;,monospace;color:var(--text-dim)" readonly="" value=""></td>
+    <td><input type="text" placeholder="06:00 - 18:00" class="wide bw-jam-inp" style="width:130px" value=""></td>
+    <td><button class="del-btn" onclick="delBWRow(this)">✕</button></td>
   </tr></tbody>
         <tfoot>
           <tr style="background:var(--coal)">
@@ -1124,6 +1132,11 @@ function dismissInstallBanner() {
             </tr>
           </thead>
           <tbody id="bs-rows"><tr>
+    <td><input type="number" placeholder="0" step="0.01" class="bs-hauling-inp" oninput="calcBSTotal()" style="width:120px;font-family:&#39;DM Mono&#39;,monospace"></td>
+    <td><input type="text" placeholder="PINANG LGHS" class="wide bs-source-inp"></td>
+    <td><input type="text" placeholder="Keterangan tambahan..." class="wide bs-note-inp"></td>
+    <td><button class="del-btn" onclick="delBSRow(this)">✕</button></td>
+  </tr><tr>
     <td><input type="number" placeholder="0" step="0.01" class="bs-hauling-inp" oninput="calcBSTotal()" style="width:120px;font-family:&#39;DM Mono&#39;,monospace"></td>
     <td><input type="text" placeholder="PINANG LGHS" class="wide bs-source-inp"></td>
     <td><input type="text" placeholder="Keterangan tambahan..." class="wide bs-note-inp"></td>
@@ -1351,6 +1364,20 @@ function dismissInstallBanner() {
     <td><input type="text" class="wide descriptions-inp" value="Saat A2B dan DT refueling" placeholder="—" readonly="" style="color:var(--text-dim);font-size:11px"></td>
     <td><input type="text" placeholder="Tambahan catatan / keterangan..." class="wide desc-inp"></td>
     <td><button class="del-btn" onclick="delRow(this)">✕</button></td>
+  </tr><tr>
+    <td><input type="text" placeholder="06:00" class="time-input stop-inp" oninput="calcDur(this)"></td>
+    <td><input type="text" placeholder="06:49" class="time-input start-inp" oninput="calcDur(this)"></td>
+    <td><input type="number" placeholder="0" step="0.01" class="dur-input" oninput="calcAvail()" readonly="" style="color:var(--accent)"></td>
+    <td>
+      <select class="code-select" onchange="calcAvail(); updateCatBadge(this); autoFillDTInfo(this)">
+        <option value="600">600 — Dozer Refuel</option><option value="601">601 — Dozer Problem</option><option value="602">602 — Clean Up</option><option value="612">612 — Full Emergency Dump</option><option value="615">615 — Dumping Area Full</option><option value="618">618 — Reposition Boom Stacker</option><option value="625">625 — Blocked Chute</option><option value="631">631 — Shifting</option><option value="633">633 — Reposition Equipment</option><option value="645">645 — Rope Switch</option><option value="646">646 — Torn Belt / Belt Rip Ops</option><option value="647">647 — Belt Drift / Tracking Ops</option><option value="671">671 — Change Products</option><option value="672">672 — Shift Change</option><option value="673">673 — Rest Time / Time Break</option><option value="680">680 — Adjust Rolls</option><option value="689">689 — Excessive Spillage</option><option value="699">699 — Other Ops</option><option value="700">700 — Non Production Day</option><option value="701">701 — No Coal</option><option value="705">705 — Heavy Rain</option><option value="710">710 — Not Required</option><option value="713">713 — No Water</option><option value="715">715 — ROM Problem</option><option value="716">716 — Full Stockpile</option><option value="720">720 — Boulder Coal</option><option value="721">721 — Uncrushable Material</option><option value="731">731 — Hauling Road Maintenance</option><option value="732">732 — KPC's Dozer Breakdown</option><option value="734">734 — Road Escort</option><option value="735">735 — Power Trip</option><option value="736">736 — Prepare Dumping Area</option><option value="737">737 — ROM Under Priority Dumping</option><option value="738">738 — Lighting Plant Not Available</option><option value="739">739 — Other Ops (2)</option><option value="740">740 — Dumping Area Full (2)</option><option value="741">741 — Project Work / Survey</option><option value="742">742 — Not Required / Stand By</option><option value="744">744 — Heavy Rain / Wind</option><option value="748">748 — Quality Mismatch</option><option value="755">755 — Shift Change (Other)</option><option value="765">765 — Time Break (Other)</option><option value="768">768 — Trucking Problem</option><option value="770">770 — CTM Problem</option><option value="772">772 — Draft Survey</option><option value="777">777 — Low Inventory</option><option value="781">781 — Check Coal Quality</option><option value="783">783 — Overburden</option><option value="784">784 — Metal Detector</option><option value="785">785 — Sliding Coal</option><option value="788">788 — Spon Comb</option><option value="791">791 — No BobCat/Loader/Dozer</option><option value="792">792 — Scada/WinCC Problem</option><option value="799">799 — Fire Emergency</option><option value="800">800 — WinCC Hanged / Comm Error</option><option value="802">802 — System Emergency Stop</option><option value="803">803 — PLC Failure</option><option value="805">805 — Drive Failure / OB Magnet</option><option value="806">806 — Over Current</option><option value="810">810 — Feeder Problem</option><option value="815">815 — Fluid Coupling Problem</option><option value="816">816 — Weighbridge Under Repair</option><option value="821">821 — Earth Leakage</option><option value="822">822 — Thermal Overload</option><option value="823">823 — Thermistor Trip</option><option value="825">825 — Air Cooler Problem</option><option value="826">826 — Low Oil Level</option><option value="827">827 — Drive Underspeed</option><option value="828">828 — Oil Pressure</option><option value="829">829 — Oil Temperature</option><option value="830">830 — Shutdown Preparation</option><option value="831">831 — Lube Failure</option><option value="835">835 — Skirt Board Adjustment</option><option value="837">837 — Motor Protection Relay</option><option value="838">838 — Brake Failure</option><option value="839">839 — VSD Fault</option><option value="840">840 — Converter Failure</option><option value="842">842 — Fluid Coupling Over Temp</option><option value="844">844 — Take Up Limit / Tension</option><option value="845">845 — Cutter Not Home / Rope Switch</option><option value="846">846 — Torn Belt</option><option value="847">847 — Belt Drift</option><option value="848">848 — Skirt Board Adjustment (2)</option><option value="852">852 — Sampler Problem</option><option value="853">853 — Position / Travel Fault</option><option value="855">855 — Calibrate Weightometer</option><option value="860">860 — Sensor Failure / Chain Feeder Broken</option><option value="861">861 — Chain Feeder Adjust</option><option value="862">862 — Bearing Broken</option><option value="863">863 — Sprocket Broken</option><option value="864">864 — Pulley Problem</option><option value="865">865 — Without Alarm</option><option value="870">870 — Calibration Metal Detector</option><option value="875">875 — Protection Trip</option><option value="880">880 — Gearbox Problem</option><option value="882">882 — Loose / Broken Bolts</option><option value="883">883 — Bearing Problem / Repair Belt</option><option value="884">884 — T/V Belt Broken</option><option value="885">885 — Roller Conveyor Problem</option><option value="886">886 — Roller Adjust</option><option value="888">888 — Piping Problem</option><option value="890">890 — Repair of Chute / Take Up Tension</option><option value="891">891 — Take Up Limit Problem</option><option value="894">894 — Leaks Problem</option><option value="896">896 — Loose / Broken Beams</option><option value="898">898 — Broken Shaft</option><option value="899">899 — Other Maintenance</option><option value="900">900 — Scheduled Maintenance</option><option value="901">901 — Upgrade Work</option>
+      </select>
+    </td>
+    <td><span class="cat-badge cat-operational">Operational</span></td>
+    <td><input type="text" class="wide delay-des-jpc-inp" value="Stand By JPC - Refueling" placeholder="—" readonly="" style="color:var(--text-dim);font-size:11px"></td>
+    <td><input type="text" class="wide descriptions-inp" value="Saat A2B dan DT refueling" placeholder="—" readonly="" style="color:var(--text-dim);font-size:11px"></td>
+    <td><input type="text" placeholder="Tambahan catatan / keterangan..." class="wide desc-inp"></td>
+    <td><button class="del-btn" onclick="delRow(this)">✕</button></td>
   </tr></tbody>
       </table>
     </div>
@@ -1390,6 +1417,20 @@ function dismissInstallBanner() {
         </thead>
         <tbody id="hauling-dt-rows">
         <tr>
+    <td><input type="text" placeholder="06:00" class="time-input hauling-stop-inp" oninput="calcHaulingDur(this)"></td>
+    <td><input type="text" placeholder="06:49" class="time-input hauling-start-inp" oninput="calcHaulingDur(this)"></td>
+    <td><input type="number" placeholder="0" step="0.01" class="hauling-dur-input" readonly="" style="color:var(--accent)"></td>
+    <td>
+      <select class="code-select hauling-code-select" onchange="updateHaulingCatBadge(this); autoFillHaulingDTInfo(this)">
+        <option value="731">731 — Hauling Road Maintenance</option><option value="732">732 — KPC's Dozer Breakdown</option><option value="734">734 — Road Escort</option><option value="736">736 — Prepare Dumping Area</option><option value="737">737 — ROM Under Priority Dumping</option><option value="738">738 — Lighting Plant Not Available</option><option value="739">739 — Other Ops</option><option value="740">740 — Dumping Area Full</option><option value="816">816 — Weighbridge Under Repair</option>
+      </select>
+    </td>
+    <td><span class="cat-badge cat-operational">Operational</span></td>
+    <td><input type="text" class="wide hauling-deskripsi-inp" value="Hauling Road Maintenance" placeholder="—" readonly="" style="color:var(--text-dim);font-size:11px"></td>
+    <td><input type="text" class="wide hauling-digunakan-inp" value="Ada perbaikan di jalan hauling" placeholder="—" readonly="" style="color:var(--text-dim);font-size:11px"></td>
+    <td><input type="text" placeholder="Tambahan catatan / keterangan..." class="wide hauling-desc-inp"></td>
+    <td><button class="del-btn" onclick="delHaulingRow(this)">✕</button></td>
+  </tr><tr>
     <td><input type="text" placeholder="06:00" class="time-input hauling-stop-inp" oninput="calcHaulingDur(this)"></td>
     <td><input type="text" placeholder="06:49" class="time-input hauling-start-inp" oninput="calcHaulingDur(this)"></td>
     <td><input type="number" placeholder="0" step="0.01" class="hauling-dur-input" readonly="" style="color:var(--accent)"></td>
@@ -1473,7 +1514,7 @@ function dismissInstallBanner() {
 </div>
 
 
-<div class="page active" id="page-daily">
+<div class="page" id="page-daily">
 
   <div class="section-header" style="justify-content:space-between">
     <div style="display:flex; align-items:center; gap:10px">
@@ -2554,50 +2595,54 @@ window.onload = async function() {
   document.getElementById('daily-date').value = today;
   document.getElementById('dash-date').value = today;
 
-  // Data sudah embedded di file HTML — langsung render
-  buildDashMonths();
+  // Init UI dulu
   addBWRow();
   addDtRow();
   addBSRow();
   addHaulingDtRow();
   setupAutoCalc();
-  buildDashMonths();
-  renderDashboard();
   initGSStatus();
 
-  // Sembunyikan slide bar saat awal (bukan halaman input)
+  // Sembunyikan slide bar saat awal
   const slideBar = document.getElementById('mob-slide-bar');
   const slideProg = document.getElementById('mob-slide-progress');
   if (slideBar) slideBar.style.display = 'none';
   if (slideProg) slideProg.style.display = 'none';
 
-  // ── Auto-pull dari GitHub setiap kali halaman dibuka ────────────────────
+  // ── Pull dari cloud DULU, baru render ────────────────────────────────────
   const cfg = getCloudConfig();
   if (cfg.username) {
-    // Sudah dikonfigurasi → pull data terbaru dari cloud
+    // Ada konfigurasi → pull data terbaru dari cloud dulu
     const ok = await loadAllFromSheets();
-    if (ok) {
-      buildDashMonths();
-      renderDashboard();
-      buildHistMonths(); renderHistory();
-    }
-    // Auto-refresh setiap 30 detik agar User selalu lihat data terbaru
+    // Render SETELAH data cloud masuk
+    buildDashMonths(); renderDashboard();
+    buildMTDMonths(); renderMTD();
+    buildHistMonths(); renderHistory();
+    const dailyDate = document.getElementById('daily-date').value;
+    if (dailyDate) renderDaily();
+
+    // Auto-refresh setiap 30 detik
     setInterval(async function() {
       const cloudDb = await pullFromCloud();
-      if (cloudDb && typeof cloudDb === "object" && Object.keys(cloudDb).length > 0) {
+      if (cloudDb && typeof cloudDb === 'object' && Object.keys(cloudDb).length > 0) {
         const merged = { ...getDB(), ...cloudDb };
         setDB(merged);
         buildDashMonths(); renderDashboard();
         buildMTDMonths(); renderMTD();
-        const dailyDate = document.getElementById("daily-date").value;
-        if (dailyDate) renderDaily();
+        const dd = document.getElementById('daily-date').value;
+        if (dd) renderDaily();
         buildHistMonths(); renderHistory();
-        // Flash LIVE badge
         var badge = document.getElementById('realtime-badge');
         if (badge) { badge.style.display = 'inline'; badge.style.opacity = '0.5'; setTimeout(function(){ badge.style.opacity = '1'; }, 300); }
       }
     }, 30000);
+  } else {
+    // Belum ada konfigurasi cloud → render dari data embedded
+    buildDashMonths(); renderDashboard();
+    buildMTDMonths(); renderMTD();
+    buildHistMonths(); renderHistory();
   }
+
   window._cloudConfigChecked = true;
 };
 
@@ -4669,10 +4714,10 @@ function showToast(msg, isError=false) {
   t._timer = setTimeout(() => { t.style.opacity = '0'; }, 3000);
 }
 </script>
-<script id="cr9-data-store" type="application/json">{"2026-05-03":{"A":{"date":"2026-05-03","shift":"A","pit":"","seam":"","bwStart":0,"bwStop":0,"tonnage":0,"tph":0,"bwRows":[],"hauling":0,"source":"","bsRows":[],"supvFP":"","supvCR":"","ewh":12,"stb":0,"bd":0,"ops":0,"remarkMaint":"","remarkGen":"","dtRows":[],"haulingDtRows":[],"savedAt":"2026-05-03T15:34:47.940Z"}},"2026-05-01":{"A":{"date":"2026-05-01","shift":"A","pit":"","seam":"","bwStart":3199482.25,"bwStop":3199625.25,"tonnage":3167.5,"tph":731.52,"bwRows":[{"source":"J6 PLK 48","bwStart":3199482.25,"bwStop":3199625.25,"tonnage":143,"tph":33.03,"jam":""},{"source":"J6 PLK48","bwStart":3199625.25,"bwStop":3202649.75,"tonnage":3024.5,"tph":698.5,"jam":""}],"hauling":4555.219999999999,"source":"PLK48, PLK48","bsRows":[{"hauling":279.02,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":4276.2,"source":"PLK48","note":"TBCT 2 SOUTH 5"}],"supvFP":"","supvCR":"","ewh":12,"stb":2.67,"bd":5,"ops":4.33,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"6,00","start":"6,30","dur":0.5,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"6,30","start":"11,30","dur":5,"desc":"","code":"855","delayDesJPC":"Repair (Scheduled) - Kalibrasi Beltweigher / Trouble Electrical - Kalibrasi Beltweigher","descriptions":"Delay dikarenakan kalibrasi weigher"},{"stop":"11,30","start":"13,30","dur":2,"desc":"","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"17,50","start":"18,00","dur":0.17,"desc":"","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"}],"haulingDtRows":[],"savedAt":"2026-05-03T15:43:38.663Z"},"B":{"date":"2026-05-01","shift":"B","pit":"","seam":"","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":7259.13,"tph":761.71,"bwRows":[{"source":"J8 PLGHS","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":3393.25,"tph":356.06,"jam":""},{"source":"J6 PLK48","bwStart":3214714.5,"bwStop":3218580.38,"tonnage":3865.88,"tph":405.65,"jam":""}],"hauling":7004.76,"source":"PLK48, PLK48","bsRows":[{"hauling":3668.26,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":3336.5,"source":"PLK48","note":"TBCT 2 SOUTH 5"}],"supvFP":"","supvCR":"","ewh":12,"stb":1.85,"bd":0.62,"ops":9.53,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"18,00","start":"18,41","dur":0.68,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"22,45","start":"23,22","dur":0.62,"desc":"","code":"899","delayDesJPC":"","descriptions":"Delay Mtce yang belum termasuk delay di maintenance di atas"},{"stop":"0,00","start":"1,00","dur":1,"desc":"","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[],"savedAt":"2026-05-03T15:49:20.117Z"}},"2026-05-02":{"A":{"date":"2026-05-02","shift":"A","pit":"","seam":"","bwStart":3210101.75,"bwStop":3211321.25,"tonnage":1219.5,"tph":696.86,"bwRows":[{"source":"J8 PLGHS","bwStart":3210101.75,"bwStop":3211321.25,"tonnage":1219.5,"tph":696.86,"jam":""}],"hauling":6978.4800000000005,"source":"PLK48, PLK48","bsRows":[{"hauling":532.6,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":6445.88,"source":"PLK48","note":"TBCT 1 SOUTH 5 B"}],"supvFP":"","supvCR":"","ewh":12,"stb":0.92,"bd":9.33,"ops":1.75,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"6,00","start":"6,40","dur":0.67,"desc":"P5M","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"6,40","start":"16,00","dur":9.33,"desc":"","code":"900","delayDesJPC":"Repair (Scheduled) - Shutdown Plan","descriptions":"Delay dikarenakan scheduled maintenance"},{"stop":"16,15","start":"16,20","dur":0.08,"desc":"","code":"784","delayDesJPC":"Stand By JPC - Metal Detector","descriptions":"Belt conv stop akibat metal detector tripped"},{"stop":"17,50","start":"18,00","dur":0.17,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[{"stop":"6,00","start":"6,40","dur":0.67,"desc":"P5M","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"12,00","start":"13,00","dur":1,"desc":"REST TIME","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"17,50","start":"18,00","dur":0.17,"desc":"CHANGE SHIFT","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"}],"savedAt":"2026-05-03T22:00:29.812Z"},"B":{"date":"2026-05-02","shift":"B","pit":"J6+J8","seam":"PLK48","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":7259.05,"tph":751.45,"bwRows":[{"source":"J8 PLGHS","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":3393.25,"tph":351.27,"jam":""},{"source":"J6 PLK48","bwStart":3214714.5,"bwStop":3218580.3,"tonnage":3865.8,"tph":400.19,"jam":""}],"hauling":6617.120000000001,"source":"PLK48, PLK48, PLK48","bsRows":[{"hauling":1604.64,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":118.84,"source":"PLK48","note":"TBCT 1 SOUTH 5B"},{"hauling":4893.64,"source":"PLK48","note":"TBCT 2 SOUTH 5"}],"supvFP":"SUTRAN HENDAR","supvCR":"KURNIA","ewh":12,"stb":1.97,"bd":0.37,"ops":9.66,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"18,00","start":"18,40","dur":0.67,"desc":"P5M+P2H","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"23,20","start":"23,28","dur":0.13,"desc":"GANTI PRODUCT","code":"671","delayDesJPC":"Stand By JPC - Ganti Produk","descriptions":"Delay dikarenakan penggantian kualitas product"},{"stop":"0,00","start":"1,00","dur":1,"desc":"BREAK","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"2,07","start":"2,26","dur":0.32,"desc":"CHAIN FEEDER TRIP","code":"860","delayDesJPC":"Trouble Electrical - Sensor Failure / Trouble Mechanical - Chain Feeder","descriptions":"Plant berhenti dikarenakan sensor atau chain feeder broken"},{"stop":"5,32","start":"5,35","dur":0.05,"desc":"","code":"885","delayDesJPC":"Repair (Scheduled) - Roller / Trouble Mechanical - Roller","descriptions":"Roller stuck, shell roller lepas dari shaft nya"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"GANTI SHIFT","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[{"stop":"18,00","start":"18,30","dur":0.5,"desc":"P5M + P2H","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"0,00","start":"1,00","dur":1,"desc":"REST TIME","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"SHIFT CHANGE","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"}],"savedAt":"2026-05-03T22:41:56.367Z"}}}</script>
+<script id="cr9-data-store" type="application/json">{"2026-05-03":{"A":{"date":"2026-05-03","shift":"A","pit":"J6 ","seam":"PLK48","bwStart":3218580.5,"bwStop":3221188.75,"tonnage":2608.25,"tph":908.8,"bwRows":[{"source":"J6 PLK48","bwStart":3218580.5,"bwStop":3221188.75,"tonnage":2608.25,"tph":908.8,"jam":""}],"hauling":6469.16,"source":"PLK48, PLGHS, PLGHS, PLK48","bsRows":[{"hauling":1436.6,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":1599.26,"source":"PLGHS","note":"TBCT 1 SOUTH 1A"},{"hauling":3122.78,"source":"PLGHS","note":"TBCT 1 SOUTH 1B"},{"hauling":310.52,"source":"PLK48","note":"YBCT 2 SOUTH 5"}],"supvFP":"SATRIA","supvCR":"BAHRIANI","ewh":12,"stb":1.38,"bd":7.75,"ops":2.87,"remarkMaint":"Pergantian bearing secondary crusher karena ada kerusakan yg tidak terprediksi sebelumnya","remarkGen":"Operational serelah perbaikkan bearing lancar","dtRows":[{"stop":"06,00","start":"07,08","dur":1.13,"desc":"P5M+P2H","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"7,38","start":"15,23","dur":7.75,"desc":"BEARING SECONDARY CRUSHER BROKEN","code":"862","delayDesJPC":"Trouble Mechanical - Bearing","descriptions":"Bearing broken"},{"stop":"17,45","start":"18,00","dur":0.25,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[{"stop":"6,00","start":"6,30","dur":0.5,"desc":"P5M+P2H","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"12,00","start":"13,00","dur":1,"desc":"REST TIME","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"17,45","start":"18,00","dur":0.25,"desc":"SHIFT CHANGE","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"}],"savedAt":"2026-05-04T01:40:46.248Z"},"B":{"date":"2026-05-03","shift":"B","pit":"","seam":"","bwStart":3221188.75,"bwStop":3225640.25,"tonnage":6977.75,"tph":688.82,"bwRows":[{"source":"J6 PLK48","bwStart":3221188.75,"bwStop":3225640.25,"tonnage":4451.5,"tph":439.44,"jam":""},{"source":"J8 PLGHS","bwStart":3225640.25,"bwStop":3228166.5,"tonnage":2526.25,"tph":249.38,"jam":""}],"hauling":0,"source":"","bsRows":[],"supvFP":"","supvCR":"","ewh":12,"stb":1.87,"bd":0,"ops":10.13,"remarkMaint":"Peralatan Fixed Plant aman","remarkGen":"","dtRows":[{"stop":"18,00","start":"18,33","dur":0.55,"desc":"P5M+P2H","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"0,00","start":"1,00","dur":1,"desc":"REST TIME","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"2,18","start":"2,27","dur":0.15,"desc":"PINDAH RADIAL","code":"671","delayDesJPC":"Stand By JPC - Ganti Produk","descriptions":"Delay dikarenakan penggantian kualitas product"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"GANTI SHIFT","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[{"stop":"18,00","start":"18,30","dur":0.5,"desc":"P5M+P2H","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"0,00","start":"1,00","dur":1,"desc":"REST TIME","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"SHIFT CHANGE","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"}],"savedAt":"2026-05-04T01:47:06.472Z"}},"2026-05-01":{"A":{"date":"2026-05-01","shift":"A","pit":"","seam":"","bwStart":3199482.25,"bwStop":3199625.25,"tonnage":3167.5,"tph":731.52,"bwRows":[{"source":"J6 PLK 48","bwStart":3199482.25,"bwStop":3199625.25,"tonnage":143,"tph":33.03,"jam":""},{"source":"J6 PLK48","bwStart":3199625.25,"bwStop":3202649.75,"tonnage":3024.5,"tph":698.5,"jam":""}],"hauling":4555.219999999999,"source":"PLK48, PLK48","bsRows":[{"hauling":279.02,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":4276.2,"source":"PLK48","note":"TBCT 2 SOUTH 5"}],"supvFP":"","supvCR":"","ewh":12,"stb":2.67,"bd":5,"ops":4.33,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"6,00","start":"6,30","dur":0.5,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"6,30","start":"11,30","dur":5,"desc":"","code":"855","delayDesJPC":"Repair (Scheduled) - Kalibrasi Beltweigher / Trouble Electrical - Kalibrasi Beltweigher","descriptions":"Delay dikarenakan kalibrasi weigher"},{"stop":"11,30","start":"13,30","dur":2,"desc":"","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"17,50","start":"18,00","dur":0.17,"desc":"","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"}],"haulingDtRows":[],"savedAt":"2026-05-03T15:43:38.663Z"},"B":{"date":"2026-05-01","shift":"B","pit":"","seam":"","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":7259.13,"tph":761.71,"bwRows":[{"source":"J8 PLGHS","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":3393.25,"tph":356.06,"jam":""},{"source":"J6 PLK48","bwStart":3214714.5,"bwStop":3218580.38,"tonnage":3865.88,"tph":405.65,"jam":""}],"hauling":7004.76,"source":"PLK48, PLK48","bsRows":[{"hauling":3668.26,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":3336.5,"source":"PLK48","note":"TBCT 2 SOUTH 5"}],"supvFP":"","supvCR":"","ewh":12,"stb":1.85,"bd":0.62,"ops":9.53,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"18,00","start":"18,41","dur":0.68,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"22,45","start":"23,22","dur":0.62,"desc":"","code":"899","delayDesJPC":"","descriptions":"Delay Mtce yang belum termasuk delay di maintenance di atas"},{"stop":"0,00","start":"1,00","dur":1,"desc":"","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[],"savedAt":"2026-05-03T15:49:20.117Z"}},"2026-05-02":{"A":{"date":"2026-05-02","shift":"A","pit":"","seam":"","bwStart":3210101.75,"bwStop":3211321.25,"tonnage":1219.5,"tph":696.86,"bwRows":[{"source":"J8 PLGHS","bwStart":3210101.75,"bwStop":3211321.25,"tonnage":1219.5,"tph":696.86,"jam":""}],"hauling":6978.4800000000005,"source":"PLK48, PLK48","bsRows":[{"hauling":532.6,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":6445.88,"source":"PLK48","note":"TBCT 1 SOUTH 5 B"}],"supvFP":"","supvCR":"","ewh":12,"stb":0.92,"bd":9.33,"ops":1.75,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"6,00","start":"6,40","dur":0.67,"desc":"P5M","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"6,40","start":"16,00","dur":9.33,"desc":"","code":"900","delayDesJPC":"Repair (Scheduled) - Shutdown Plan","descriptions":"Delay dikarenakan scheduled maintenance"},{"stop":"16,15","start":"16,20","dur":0.08,"desc":"","code":"784","delayDesJPC":"Stand By JPC - Metal Detector","descriptions":"Belt conv stop akibat metal detector tripped"},{"stop":"17,50","start":"18,00","dur":0.17,"desc":"","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[{"stop":"6,00","start":"6,40","dur":0.67,"desc":"P5M","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"12,00","start":"13,00","dur":1,"desc":"REST TIME","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"17,50","start":"18,00","dur":0.17,"desc":"CHANGE SHIFT","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"}],"savedAt":"2026-05-03T22:00:29.812Z"},"B":{"date":"2026-05-02","shift":"B","pit":"J6+J8","seam":"PLK48","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":7259.05,"tph":751.45,"bwRows":[{"source":"J8 PLGHS","bwStart":3211321.25,"bwStop":3214714.5,"tonnage":3393.25,"tph":351.27,"jam":""},{"source":"J6 PLK48","bwStart":3214714.5,"bwStop":3218580.3,"tonnage":3865.8,"tph":400.19,"jam":""}],"hauling":6617.120000000001,"source":"PLK48, PLK48, PLK48","bsRows":[{"hauling":1604.64,"source":"PLK48","note":"TBCT 1 NORTH 1"},{"hauling":118.84,"source":"PLK48","note":"TBCT 1 SOUTH 5B"},{"hauling":4893.64,"source":"PLK48","note":"TBCT 2 SOUTH 5"}],"supvFP":"SUTRAN HENDAR","supvCR":"KURNIA","ewh":12,"stb":1.97,"bd":0.37,"ops":9.66,"remarkMaint":"","remarkGen":"","dtRows":[{"stop":"18,00","start":"18,40","dur":0.67,"desc":"P5M+P2H","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"},{"stop":"23,20","start":"23,28","dur":0.13,"desc":"GANTI PRODUCT","code":"671","delayDesJPC":"Stand By JPC - Ganti Produk","descriptions":"Delay dikarenakan penggantian kualitas product"},{"stop":"0,00","start":"1,00","dur":1,"desc":"BREAK","code":"673","delayDesJPC":"Break (Rest & Prayer)","descriptions":"Jam istirahat (12:00-13:00 atau 00:00-01:00)"},{"stop":"2,07","start":"2,26","dur":0.32,"desc":"CHAIN FEEDER TRIP","code":"860","delayDesJPC":"Trouble Electrical - Sensor Failure / Trouble Mechanical - Chain Feeder","descriptions":"Plant berhenti dikarenakan sensor atau chain feeder broken"},{"stop":"5,32","start":"5,35","dur":0.05,"desc":"","code":"885","delayDesJPC":"Repair (Scheduled) - Roller / Trouble Mechanical - Roller","descriptions":"Roller stuck, shell roller lepas dari shaft nya"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"GANTI SHIFT","code":"672","delayDesJPC":"Overshift","descriptions":"Pergantian dari day shift ke night shift (begitu pun sebaliknya)"}],"haulingDtRows":[{"stop":"18,00","start":"18,30","dur":0.5,"desc":"P5M + P2H","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"0,00","start":"1,00","dur":1,"desc":"REST TIME","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"},{"stop":"5,50","start":"6,00","dur":0.17,"desc":"SHIFT CHANGE","code":"739","deskripsi":"Other Ops","digunakanSaat":"Delay lain-lain"}],"savedAt":"2026-05-03T22:41:56.367Z"}}}</script>
 <script id="cr9-cloud-config" type="application/json">{"username":"hariyono007-ship-it","repo":"CR09-Harimau"}</script>
-<script src="./index_files/chart.umd.js.download"></script>
-<script src="./index_files/xlsx.full.min.js.download"></script>
+<script src="file:///C:/Users/HP/Downloads/index_files/chart.umd.js.download"></script>
+<script src="file:///C:/Users/HP/Downloads/index_files/xlsx.full.min.js.download"></script>
 
 <!-- ═══ EXCEL EXPORT MODAL ═══ -->
 <div id="excel-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center">
@@ -5120,11 +5165,11 @@ document.getElementById('excel-modal').addEventListener('click', function(e) {
 
 <!-- ═══ MOBILE BOTTOM NAV ═══ -->
 <nav id="mobile-bottom-nav">
-  <button class="mob-nav-btn active" id="mob-btn-dashboard" onclick="showPage(&#39;dashboard&#39;)">
+  <button class="mob-nav-btn" id="mob-btn-dashboard" onclick="showPage(&#39;dashboard&#39;)">
     <span class="mob-nav-icon">📊</span>
     <span>Dashboard</span>
   </button>
-  <button class="mob-nav-btn" id="mob-btn-input" onclick="showPage(&#39;input&#39;)" style="display: flex;">
+  <button class="mob-nav-btn active" id="mob-btn-input" onclick="showPage(&#39;input&#39;)" style="display: flex;">
     <span class="mob-nav-icon">✏️</span>
     <span>Input</span>
   </button>
