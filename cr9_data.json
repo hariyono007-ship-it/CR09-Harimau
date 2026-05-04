@@ -685,7 +685,7 @@
           "jam": ""
         }
       ],
-      "hauling": 53085,
+      "hauling": 5085,
       "source": "PLG HS, PLK48",
       "bsRows": [
         {
@@ -694,7 +694,7 @@
           "note": "TBCT 1 SOUTH 1 A"
         },
         {
-          "hauling": 48305.66,
+          "hauling": 305.66,
           "source": "PLK48",
           "note": "TBCT 2 NORTH 2"
         }
@@ -765,7 +765,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-04T12:16:49.961Z"
+      "savedAt": "2026-05-04T12:18:12.511Z"
     }
   }
 }
