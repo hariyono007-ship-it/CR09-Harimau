@@ -669,7 +669,7 @@
     "A": {
       "date": "2026-05-04",
       "shift": "A",
-      "pit": "J6+J8",
+      "pit": "J8",
       "seam": "PLGHS",
       "bwStart": 3228166.5,
       "bwStop": 3235377.75,
@@ -765,7 +765,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-04T12:21:05.578Z"
+      "savedAt": "2026-05-04T12:27:17.006Z"
     }
   }
 }
