@@ -138,9 +138,20 @@
           "jam": ""
         }
       ],
-      "hauling": 0,
-      "source": "",
-      "bsRows": [],
+      "hauling": 6515.7,
+      "source": "PLK48, PLGHS",
+      "bsRows": [
+        {
+          "hauling": 5299.96,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        },
+        {
+          "hauling": 1215.74,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        }
+      ],
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
@@ -216,7 +227,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-04T01:47:06.472Z"
+      "savedAt": "2026-05-04T02:34:23.710Z"
     }
   },
   "2026-05-01": {
