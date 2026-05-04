@@ -110,6 +110,113 @@
         }
       ],
       "savedAt": "2026-05-04T01:40:46.248Z"
+    },
+    "B": {
+      "date": "2026-05-03",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3221188.75,
+      "bwStop": 3225640.25,
+      "tonnage": 6977.75,
+      "tph": 688.82,
+      "bwRows": [
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3221188.75,
+          "bwStop": 3225640.25,
+          "tonnage": 4451.5,
+          "tph": 439.44,
+          "jam": ""
+        },
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3225640.25,
+          "bwStop": 3228166.5,
+          "tonnage": 2526.25,
+          "tph": 249.38,
+          "jam": ""
+        }
+      ],
+      "hauling": 0,
+      "source": "",
+      "bsRows": [],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 1.87,
+      "bd": 0,
+      "ops": 10.13,
+      "remarkMaint": "Peralatan Fixed Plant aman",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,33",
+          "dur": 0.55,
+          "desc": "P5M+P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "2,18",
+          "start": "2,27",
+          "dur": 0.15,
+          "desc": "PINDAH RADIAL",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "GANTI SHIFT",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,30",
+          "dur": 0.5,
+          "desc": "P5M+P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "SHIFT CHANGE",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-04T01:46:57.340Z"
     }
   },
   "2026-05-01": {
