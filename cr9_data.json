@@ -50,7 +50,7 @@
       "bd": 7.75,
       "ops": 2.87,
       "remarkMaint": "Pergantian bearing secondary crusher karena ada kerusakan yg tidak terprediksi sebelumnya",
-      "remarkGen": "Operational serelah perbaikkan bearing lancar",
+      "remarkGen": "",
       "dtRows": [
         {
           "stop": "06,00",
@@ -109,7 +109,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-04T02:28:30.232Z"
+      "savedAt": "2026-05-04T02:29:07.206Z"
     },
     "B": {
       "date": "2026-05-03",
