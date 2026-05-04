@@ -3,27 +3,113 @@
     "A": {
       "date": "2026-05-03",
       "shift": "A",
-      "pit": "",
-      "seam": "",
-      "bwStart": 0,
-      "bwStop": 0,
-      "tonnage": 0,
-      "tph": 0,
-      "bwRows": [],
-      "hauling": 0,
-      "source": "",
-      "bsRows": [],
-      "supvFP": "",
-      "supvCR": "",
+      "pit": "J6 ",
+      "seam": "PLK48",
+      "bwStart": 3218580.5,
+      "bwStop": 3221188.75,
+      "tonnage": 2608.25,
+      "tph": 908.8,
+      "bwRows": [
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3218580.5,
+          "bwStop": 3221188.75,
+          "tonnage": 2608.25,
+          "tph": 908.8,
+          "jam": ""
+        }
+      ],
+      "hauling": 6469.16,
+      "source": "PLK48, PLGHS, PLGHS, PLK48",
+      "bsRows": [
+        {
+          "hauling": 1436.6,
+          "source": "PLK48",
+          "note": "TBCT 1 NORTH 1"
+        },
+        {
+          "hauling": 1599.26,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        },
+        {
+          "hauling": 3122.78,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1B"
+        },
+        {
+          "hauling": 310.52,
+          "source": "PLK48",
+          "note": "YBCT 2 SOUTH 5"
+        }
+      ],
+      "supvFP": "SATRIA",
+      "supvCR": "BAHRIANI",
       "ewh": 12,
-      "stb": 0,
-      "bd": 0,
-      "ops": 0,
-      "remarkMaint": "",
-      "remarkGen": "",
-      "dtRows": [],
-      "haulingDtRows": [],
-      "savedAt": "2026-05-03T15:34:47.940Z"
+      "stb": 1.38,
+      "bd": 7.75,
+      "ops": 2.87,
+      "remarkMaint": "Pergantian bearing secondary crusher karena ada kerusakan yg tidak terprediksi sebelumnya",
+      "remarkGen": "Operational serelah perbaikkan bearing lancar",
+      "dtRows": [
+        {
+          "stop": "06,00",
+          "start": "07,08",
+          "dur": 1.13,
+          "desc": "P5M+P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "7,38",
+          "start": "15,23",
+          "dur": 7.75,
+          "desc": "BEARING SECONDARY CRUSHER BROKEN",
+          "code": "862",
+          "delayDesJPC": "Trouble Mechanical - Bearing",
+          "descriptions": "Bearing broken"
+        },
+        {
+          "stop": "17,45",
+          "start": "18,00",
+          "dur": 0.25,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,30",
+          "dur": 0.5,
+          "desc": "P5M+P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,45",
+          "start": "18,00",
+          "dur": 0.25,
+          "desc": "SHIFT CHANGE",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-04T01:40:46.248Z"
     }
   },
   "2026-05-01": {
