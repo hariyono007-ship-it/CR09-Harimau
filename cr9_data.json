@@ -664,5 +664,108 @@
       ],
       "savedAt": "2026-05-03T22:41:56.367Z"
     }
+  },
+  "2026-05-04": {
+    "A": {
+      "date": "2026-05-04",
+      "shift": "A",
+      "pit": "J6+J8",
+      "seam": "PLGHS",
+      "bwStart": 3228166.5,
+      "bwStop": 3235377.75,
+      "tonnage": 7211.25,
+      "tph": 751.96,
+      "bwRows": [
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3228166.5,
+          "bwStop": 3235377.75,
+          "tonnage": 7211.25,
+          "tph": 751.96,
+          "jam": ""
+        }
+      ],
+      "hauling": 53085,
+      "source": "PLG HS, PLK48",
+      "bsRows": [
+        {
+          "hauling": 4779.34,
+          "source": "PLG HS",
+          "note": "TBCT 1 SOUTH 1 A"
+        },
+        {
+          "hauling": 48305.66,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        }
+      ],
+      "supvFP": "SATRIA",
+      "supvCR": "BAHRIANI",
+      "ewh": 12,
+      "stb": 2.41,
+      "bd": 0,
+      "ops": 9.59,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "7,14",
+          "dur": 1.23,
+          "desc": "SAFETY TALK+P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "17,49",
+          "start": "18,00",
+          "dur": 0.18,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "7,00",
+          "dur": 1,
+          "desc": "SAFETY TALK+P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "GANTI SHIFT",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-04T12:16:49.961Z"
+    }
   }
 }
