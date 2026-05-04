@@ -1248,6 +1248,461 @@ function dismissInstallBanner() {
     </div>
   </div>
 
+  <!-- ══════════════════════════════════════════════════════════
+       AI ANALYSIS PANEL
+  ══════════════════════════════════════════════════════════ -->
+  <div class="panel" id="ai-analysis-panel" style="border-color: rgba(138,43,226,0.5); background: linear-gradient(135deg, var(--panel) 0%, rgba(138,43,226,0.05) 100%); margin-top: 16px;">
+    <div class="panel-title" style="color: #a78bfa;">
+      <span style="width:3px;height:14px;background:linear-gradient(180deg,#a78bfa,#7c3aed);border-radius:2px;display:inline-block;margin-right:0"></span>
+      🤖 Analisa AI — CR09 Harimau
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;font-size:12px;color:var(--text-dim);line-height:1.6;">
+        Analisa otomatis berdasarkan data aktual: breakdown, standby, tonase crushing &amp; hauling, serta KPI availability (PA, MA, UA). AI akan memberikan insight dan rekomendasi peningkatan produksi.
+      </div>
+      <button id="ai-analyze-btn" onclick="runAIAnalysis()"
+        style="padding:10px 22px;background:linear-gradient(135deg,#5b21b6,#7c3aed);border:1px solid #a78bfa;border-radius:8px;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;transition:opacity 0.2s;">
+        ✨ Jalankan Analisa AI
+      </button>
+    </div>
+
+    <!-- Status / Loading -->
+    <div id="ai-status" style="display:none;align-items:center;gap:10px;padding:12px 16px;background:rgba(124,58,237,0.1);border:1px solid rgba(167,139,250,0.3);border-radius:8px;margin-bottom:12px;">
+      <div id="ai-spinner" style="width:18px;height:18px;border:2px solid rgba(167,139,250,0.3);border-top:2px solid #a78bfa;border-radius:50%;animation:ai-spin 0.9s linear infinite;flex-shrink:0;"></div>
+      <span id="ai-status-text" style="font-size:13px;color:#a78bfa;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;">Menganalisa data produksi...</span>
+    </div>
+
+    <!-- Result Box -->
+    <div id="ai-result" style="display:none;">
+      <!-- Summary Cards -->
+      <div id="ai-summary-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px;"></div>
+
+      <!-- AI Response -->
+      <div id="ai-response-box" style="background:var(--coal-light);border:1px solid rgba(167,139,250,0.25);border-radius:8px;padding:18px;font-size:13px;line-height:1.75;color:var(--text);">
+      </div>
+
+      <!-- Regenerate -->
+      <div style="display:flex;justify-content:flex-end;margin-top:10px;gap:8px;">
+        <span id="ai-timestamp" style="font-size:10px;color:var(--text-muted);align-self:center;"></span>
+        <button onclick="runAIAnalysis()" style="padding:6px 16px;background:transparent;border:1px solid rgba(167,139,250,0.4);border-radius:6px;color:#a78bfa;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;">🔄 Perbarui Analisa</button>
+      </div>
+    </div>
+
+    <!-- Error -->
+    <div id="ai-error" style="display:none;padding:12px 16px;background:rgba(232,64,64,0.1);border:1px solid rgba(232,64,64,0.3);border-radius:8px;font-size:13px;color:var(--danger);"></div>
+  </div>
+
+  <style>
+    @keyframes ai-spin { to { transform: rotate(360deg); } }
+    #ai-response-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px; font-weight: 800; letter-spacing: 1px;
+      text-transform: uppercase; color: #a78bfa;
+      margin: 16px 0 8px; padding-bottom: 6px;
+      border-bottom: 1px solid rgba(167,139,250,0.2);
+    }
+    #ai-response-box h3:first-child { margin-top: 0; }
+    #ai-response-box ul { padding-left: 20px; margin: 6px 0 12px; }
+    #ai-response-box li { margin-bottom: 5px; }
+    #ai-response-box strong { color: var(--accent); }
+    #ai-response-box .rec-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 12px; margin-bottom: 8px;
+      background: rgba(255,255,255,0.03); border-radius: 6px;
+      border-left: 3px solid #a78bfa;
+    }
+    #ai-response-box .badge-ok { color: #27c77a; font-weight: 700; }
+    #ai-response-box .badge-warn { color: #f5a623; font-weight: 700; }
+    #ai-response-box .badge-danger { color: #e84040; font-weight: 700; }
+    .ai-kpi-card {
+      background: var(--coal);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+    .ai-kpi-val { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; line-height:1; }
+    .ai-kpi-lbl { font-size:10px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:.5px; }
+  </style>
+
+  <script>
+  // ══════════════════════════════════════════════════
+  // SMART ANALYSIS ENGINE — Pure JavaScript, No API
+  // ══════════════════════════════════════════════════
+
+  function badgeColor(val, threshOk, threshWarn) {
+    if (val >= threshOk)   return 'badge-ok';
+    if (val >= threshWarn) return 'badge-warn';
+    return 'badge-danger';
+  }
+  function colorHex(val, threshOk, threshWarn) {
+    if (val >= threshOk)   return '#27c77a';
+    if (val >= threshWarn) return '#f5a623';
+    return '#e84040';
+  }
+  function fmt(n, dec) { return (typeof n==='number'?n:parseFloat(n)||0).toFixed(dec||0); }
+  function fmtN(n) { return (parseFloat(n)||0).toLocaleString('id-ID',{maximumFractionDigits:1}); }
+
+  // ─── Thresholds target operasi CR09 Harimau ──────────────────────────────
+  const THRESH = {
+    PA:          { ok: 93,    warn: 85   },   // target PA  93%
+    MA:          { ok: 93,    warn: 85   },   // target MA  93%
+    UA:          { ok: 80,    warn: 65   },
+    TPH:         { ok: 700,   warn: 500  },
+    TON_HARIAN:  { ok: 13000, warn: 10000 },  // target crushing & hauling 13.000 ton/periode
+    BD_JAM_HARI: { ok: 0.5,   warn: 1.5  }
+  };
+
+  function runAIAnalysis() {
+    const db = (typeof getDB === 'function') ? getDB() : {};
+    const slicerResult = (typeof getSlicerDays === 'function') ? getSlicerDays() : { days: Object.keys(db).sort(), single: false };
+    const allDbDays = Object.keys(db).sort();
+    const effectiveDays = (slicerResult.days && slicerResult.days.length > 0)
+      ? slicerResult.days
+      : allDbDays.slice(-7);
+
+    const statusEl = document.getElementById('ai-status');
+    const resultEl = document.getElementById('ai-result');
+    const errorEl  = document.getElementById('ai-error');
+    const btn      = document.getElementById('ai-analyze-btn');
+
+    if (effectiveDays.length === 0) {
+      errorEl.style.display = 'block';
+      errorEl.innerHTML = '⚠ Belum ada data untuk dianalisa. Masukkan data shift terlebih dahulu.';
+      return;
+    }
+
+    statusEl.style.display = 'flex';
+    resultEl.style.display = 'none';
+    errorEl.style.display  = 'none';
+    btn.style.opacity = '0.6'; btn.disabled = true;
+    document.getElementById('ai-status-text').textContent = 'Menganalisa data produksi...';
+
+    // Pakai setTimeout agar spinner sempat muncul di browser
+    setTimeout(function() {
+      try {
+        const result = _buildAnalysis(db, effectiveDays);
+        document.getElementById('ai-summary-cards').innerHTML = result.cards;
+        document.getElementById('ai-response-box').innerHTML  = result.html;
+        document.getElementById('ai-timestamp').textContent   =
+          'Dianalisa: ' + new Date().toLocaleString('id-ID',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+        statusEl.style.display = 'none';
+        resultEl.style.display = 'block';
+      } catch(e) {
+        statusEl.style.display = 'none';
+        errorEl.style.display  = 'block';
+        errorEl.innerHTML = '⚠ Error analisa: ' + e.message;
+      } finally {
+        btn.style.opacity = '1'; btn.disabled = false;
+      }
+    }, 400);
+  }
+
+  function _buildAnalysis(db, days) {
+    // ── 1. Aggregate ────────────────────────────────────────────────────────
+    let totTon=0,totHaul=0,totOps=0,totSTB=0,totBD=0,totEWH=0;
+    const bdCodes={}, stbCodes={}, haulingBdCodes={};
+    const dailySeries=[];
+
+    days.forEach(function(date) {
+      const dd = db[date]; if (!dd) return;
+      let dTon=0,dHaul=0,dOps=0,dSTB=0,dBD=0,dEWH=0,dBdJam=0;
+      ['A','B'].forEach(function(sk) {
+        const s = dd[sk]; if (!s) return;
+        dTon  += s.tonnage||0; dHaul += s.hauling||0;
+        dOps  += s.ops||0;     dSTB  += s.stb||0;
+        dBD   += s.bd||0;      dEWH  += s.ewh||0;
+        dBdJam += s.bd||0;
+
+        (s.dtRows||[]).forEach(function(r) {
+          if (!(r.dur>0)) return;
+          const info = (typeof DT_CODES!=='undefined' && DT_CODES[r.code])||{cat:'other'};
+          if (info.cat==='maintenance') {
+            bdCodes[r.code] = (bdCodes[r.code]||{dur:0,freq:0,label:info.label||r.code});
+            bdCodes[r.code].dur += r.dur; bdCodes[r.code].freq++;
+          } else {
+            stbCodes[r.code] = (stbCodes[r.code]||{dur:0,freq:0,label:info.label||r.code});
+            stbCodes[r.code].dur += r.dur; stbCodes[r.code].freq++;
+          }
+        });
+        (s.haulingDtRows||[]).forEach(function(r) {
+          if (!(r.dur>0)) return;
+          const lbl = (typeof HAULING_DT_CODES!=='undefined' && HAULING_DT_CODES[r.code]&&HAULING_DT_CODES[r.code].deskripsi)||r.code||'—';
+          haulingBdCodes[r.code] = (haulingBdCodes[r.code]||{dur:0,freq:0,label:lbl});
+          haulingBdCodes[r.code].dur += r.dur; haulingBdCodes[r.code].freq++;
+        });
+      });
+      totTon+=dTon; totHaul+=dHaul; totOps+=dOps;
+      totSTB+=dSTB; totBD+=dBD;     totEWH+=dEWH;
+      dailySeries.push({date,ton:dTon,haul:dHaul,ops:dOps,stb:dSTB,bd:dBD,ewh:dEWH});
+    });
+
+    const nDays      = days.length;
+    const paVal      = totEWH>0 ? (totOps+totSTB)/totEWH*100 : 0;
+    const uaVal      = totEWH>0 ? totOps/totEWH*100 : 0;
+    const maVal      = totEWH>0 ? (totEWH-totBD)/totEWH*100 : 100;
+    const avgTPH     = totOps>0 ? totTon/totOps : 0;
+    const avgTonHari = nDays>0  ? totTon/nDays  : 0;
+    const bdJamHari  = nDays>0  ? totBD/nDays   : 0;
+    const stbJamHari = nDays>0  ? totSTB/nDays  : 0;
+    const gapCH      = totTon - totHaul;   // gap crushing vs hauling
+    const pGap       = totTon>0 ? (gapCH/totTon*100) : 0;
+
+    // Sort top issues
+    const topBD  = Object.entries(bdCodes).sort(function(a,b){return b[1].dur-a[1].dur;}).slice(0,5);
+    const topSTB = Object.entries(stbCodes).sort(function(a,b){return b[1].dur-a[1].dur;}).slice(0,5);
+    const topHDT = Object.entries(haulingBdCodes).sort(function(a,b){return b[1].dur-a[1].dur;}).slice(0,3);
+    const totBdEvents   = Object.values(bdCodes).reduce(function(s,v){return s+v.freq;},0);
+    const totStbEvents  = Object.values(stbCodes).reduce(function(s,v){return s+v.freq;},0);
+
+    var tonTgt  = THRESH.TON_HARIAN.ok * nDays;
+    var haulTgt = THRESH.TON_HARIAN.ok * nDays;
+    var pctC = tonTgt>0  ? Math.min(totTon/tonTgt*100,100)  : 100;
+    var pctH = haulTgt>0 ? Math.min(totHaul/haulTgt*100,100): 100;
+    var cards = [
+      {val:fmtN(totTon),              lbl:'Crushing · Target '+fmtN(tonTgt)+' ton',  col: totTon>=tonTgt?'#27c77a':totTon>=tonTgt*0.85?'#f5a623':'#e84040', sub: fmt(pctC,1)+'% tercapai'},
+      {val:fmtN(totHaul),             lbl:'Hauling · Target '+fmtN(haulTgt)+' ton',  col: totHaul>=haulTgt?'#27c77a':totHaul>=haulTgt*0.85?'#f5a623':'#e84040', sub: fmt(pctH,1)+'% tercapai'},
+      {val:fmt(paVal,1)+'%',          lbl:'PA · Target '+THRESH.PA.ok+'%',           col:colorHex(paVal,THRESH.PA.ok,THRESH.PA.warn), sub: paVal>=THRESH.PA.ok?'✓ Tercapai':fmt(THRESH.PA.ok-paVal,1)+'% kurang'},
+      {val:fmt(maVal,1)+'%',          lbl:'MA · Target '+THRESH.MA.ok+'%',           col:colorHex(maVal,THRESH.MA.ok,THRESH.MA.warn), sub: maVal>=THRESH.MA.ok?'✓ Tercapai':fmt(THRESH.MA.ok-maVal,1)+'% kurang'},
+      {val:fmt(uaVal,1)+'%',          lbl:'UA · Target '+THRESH.UA.ok+'%',           col:colorHex(uaVal,THRESH.UA.ok,THRESH.UA.warn), sub: uaVal>=THRESH.UA.ok?'✓ Tercapai':fmt(THRESH.UA.ok-uaVal,1)+'% kurang'},
+      {val:totBdEvents,               lbl:'Kejadian Breakdown',                       col:totBdEvents===0?'#27c77a':totBdEvents<=3?'#f5a623':'#e84040', sub: fmt(bdJamHari,2)+' jam/hari'},
+      {val:totStbEvents,              lbl:'Kejadian Standby',                         col:'#4d9fff', sub: fmt(stbJamHari,2)+' jam/hari'},
+      {val:Math.round(avgTPH)+' t/j', lbl:'Avg TPH',                                 col:colorHex(avgTPH,THRESH.TPH.ok,THRESH.TPH.warn), sub: nDays+' hari data'},
+    ].map(function(c) {
+      return '<div class="ai-kpi-card">'
+           + '<div class="ai-kpi-val" style="color:'+c.col+'">'+c.val+'</div>'
+           + '<div class="ai-kpi-lbl">'+c.lbl+'</div>'
+           + '<div style="font-size:10px;margin-top:3px;color:'+c.col+';opacity:0.8">'+c.sub+'</div>'
+           + '</div>';
+    }).join('');
+
+    // ── 3. Logic: generate dynamic insights ─────────────────────────────────
+
+    // — Ringkasan Kinerja —
+    var ringkasan = [];
+    var overallStatus = '';
+    if (paVal>=THRESH.PA.ok && maVal>=THRESH.MA.ok && uaVal>=THRESH.UA.ok) {
+      overallStatus = '<span class="badge-ok">BAIK</span>';
+      ringkasan.push('Kinerja plant secara keseluruhan berada pada kondisi <span class="badge-ok">BAIK</span>. Semua KPI availability di atas target.');
+    } else if (paVal>=THRESH.PA.warn && maVal>=THRESH.MA.warn) {
+      overallStatus = '<span class="badge-warn">CUKUP</span>';
+      ringkasan.push('Kinerja plant berada pada kondisi <span class="badge-warn">CUKUP</span>. Masih ada ruang peningkatan pada beberapa KPI.');
+    } else {
+      overallStatus = '<span class="badge-danger">PERLU PERHATIAN</span>';
+      ringkasan.push('Kinerja plant berada pada kondisi <span class="badge-danger">PERLU PERHATIAN SEGERA</span>. Beberapa KPI di bawah target minimum.');
+    }
+    ringkasan.push('Periode analisa: <strong>'+days[0]+' s/d '+days[days.length-1]+'</strong> ('+nDays+' hari).');
+    ringkasan.push('Total tonase crushing: <strong>'+fmtN(totTon)+' ton</strong>, rata-rata <strong>'+fmtN(avgTonHari)+' ton/hari</strong>.');
+    ringkasan.push('Total tonase hauling: <strong>'+fmtN(totHaul)+' ton</strong>'+(gapCH>100?' — terdapat selisih <strong>'+fmtN(gapCH)+' ton ('+fmt(pGap,1)+'%)</strong> antara crushing dan hauling, menunjukkan adanya <strong>stok di stockpile</strong> atau potensi bottleneck hauling.':'.')+'');
+    ringkasan.push('Rata-rata TPH: <strong '+' class="'+badgeColor(avgTPH,THRESH.TPH.ok,THRESH.TPH.warn)+'">'+Math.round(avgTPH)+' ton/jam</strong>. PA: <strong class="'+badgeColor(paVal,THRESH.PA.ok,THRESH.PA.warn)+'">'+fmt(paVal,1)+'%</strong> | MA: <strong class="'+badgeColor(maVal,THRESH.MA.ok,THRESH.MA.warn)+'">'+fmt(maVal,1)+'%</strong> | UA: <strong class="'+badgeColor(uaVal,THRESH.UA.ok,THRESH.UA.warn)+'">'+fmt(uaVal,1)+'%</strong>.');
+    ringkasan.push('Total breakdown (BD): <strong>'+fmt(totBD,2)+' jam</strong> ('+fmt(bdJamHari,2)+' jam/hari), total standby (STB): <strong>'+fmt(totSTB,2)+' jam</strong> ('+fmt(stbJamHari,2)+' jam/hari).');
+
+    // ── Target periode ────────────────────────────────────────────────────────
+    var tonTarget  = THRESH.TON_HARIAN.ok * nDays;   // 13.000 × n hari
+    var haulTarget = THRESH.TON_HARIAN.ok * nDays;
+    var gapTonTarget  = tonTarget  - totTon;
+    var gapHaulTarget = haulTarget - totHaul;
+    var pctCrushCapai = tonTarget>0  ? (totTon/tonTarget*100)  : 100;
+    var pctHaulCapai  = haulTarget>0 ? (totHaul/haulTarget*100): 100;
+
+    // — Ringkasan tambahan: capaian vs target —
+    var targetCrushTxt = '<strong class="'+(totTon>=tonTarget?'badge-ok':totTon>=tonTarget*0.85?'badge-warn':'badge-danger')+'">'+fmt(pctCrushCapai,1)+'%</strong> dari target <strong>'+fmtN(tonTarget)+' ton</strong>';
+    var targetHaulTxt  = '<strong class="'+(totHaul>=haulTarget?'badge-ok':totHaul>=haulTarget*0.85?'badge-warn':'badge-danger')+'">'+fmt(pctHaulCapai,1)+'%</strong> dari target <strong>'+fmtN(haulTarget)+' ton</strong>';
+    ringkasan.push('Capaian crushing: '+targetCrushTxt+'. Capaian hauling: '+targetHaulTxt+'.');
+
+    // — Masalah Utama —
+    var masalah = [];
+
+    // Target tonase crushing
+    if (totTon < tonTarget) {
+      masalah.push('<strong>Tonase crushing belum capai target</strong> — realisasi <strong>'+fmtN(totTon)+' ton</strong> dari target <strong class="badge-warn">'+fmtN(tonTarget)+' ton</strong> ('+fmt(pctCrushCapai,1)+'%). Kurang <strong class="badge-danger">'+fmtN(gapTonTarget)+' ton</strong> untuk mencapai target '+fmtN(THRESH.TON_HARIAN.ok)+' ton/hari.');
+    }
+
+    // Target tonase hauling
+    if (totHaul < haulTarget) {
+      masalah.push('<strong>Tonase hauling belum capai target</strong> — realisasi <strong>'+fmtN(totHaul)+' ton</strong> dari target <strong class="badge-warn">'+fmtN(haulTarget)+' ton</strong> ('+fmt(pctHaulCapai,1)+'%). Perlu koordinasi peningkatan ritase hauling ke TBCT.');
+    }
+
+    // MA rendah
+    if (maVal < THRESH.MA.ok) {
+      var selMA = fmt(THRESH.MA.ok - maVal, 1);
+      masalah.push('<strong>MA rendah ('+fmt(maVal,1)+'%)</strong> — '+selMA+'% di bawah target <strong class="badge-warn">'+THRESH.MA.ok+'%</strong>. Total jam breakdown <strong>'+fmt(totBD,2)+' jam</strong> ('+fmt(bdJamHari,2)+' jam/hari). '
+        +(topBD.length>0?'Penyebab utama: <strong>'+topBD[0][1].label+' (kode '+topBD[0][0]+')</strong> selama <strong>'+fmt(topBD[0][1].dur,2)+' jam</strong> — '+topBD[0][1].freq+' kejadian.':''));
+    }
+
+    // PA rendah
+    if (paVal < THRESH.PA.ok) {
+      masalah.push('<strong>PA rendah ('+fmt(paVal,1)+'%)</strong> — Physical Availability <strong>'+fmt(THRESH.PA.ok-paVal,1)+'%</strong> di bawah target <span class="badge-warn">'+THRESH.PA.ok+'%</span>. Gabungan breakdown dan standby mengurangi ketersediaan plant dari jam tersedia.');
+    }
+
+    // UA rendah
+    if (uaVal < THRESH.UA.warn) {
+      masalah.push('<strong>UA rendah ('+fmt(uaVal,1)+'%)</strong> — Plant sering standby meski secara mekanik siap. Faktor operasional dominan: '+(topSTB.length>0?'"'+topSTB[0][1].label+'" = <strong>'+fmt(topSTB[0][1].dur,2)+' jam</strong>':'lihat detail standby')+' menghambat utilisasi.');
+    }
+
+    // Top breakdown
+    if (topBD.length > 0) {
+      var bdList = topBD.map(function(e) {
+        var pct = totBD>0?(e[1].dur/totBD*100):0;
+        return '<strong>'+e[1].label+' ('+e[0]+')</strong>: '+fmt(e[1].dur,2)+' jam · '+e[1].freq+' kejadian ('+fmt(pct,1)+'% dari total BD)';
+      });
+      masalah.push('<strong>Breakdown dominan crushing (Top '+topBD.length+'):</strong><ul><li>'+bdList.join('</li><li>')+'</li></ul>');
+    }
+
+    // Top standby
+    if (topSTB.length > 0) {
+      var stbList = topSTB.slice(0,3).map(function(e) {
+        var pct = totSTB>0?(e[1].dur/totSTB*100):0;
+        return '<strong>'+e[1].label+' ('+e[0]+')</strong>: '+fmt(e[1].dur,2)+' jam · '+e[1].freq+' kejadian ('+fmt(pct,1)+'% dari STB)';
+      });
+      masalah.push('<strong>Standby operasional dominan:</strong><ul><li>'+stbList.join('</li><li>')+'</li></ul>');
+    }
+
+    // Gap crushing vs hauling
+    if (pGap > 8) {
+      masalah.push('<strong>Gap Crushing–Hauling ('+fmt(pGap,1)+'%)</strong> — <strong>'+fmtN(gapCH)+' ton</strong> hasil crushing belum ter-hauling. Risiko stockpile overflow jika hauling tidak segera ditingkatkan.');
+    }
+
+    // Hauling downtime
+    if (topHDT.length > 0) {
+      var hdtList = topHDT.map(function(e){return '<strong>'+e[1].label+' ('+e[0]+')</strong>: '+fmt(e[1].dur,2)+' jam ('+e[1].freq+'x)';});
+      masalah.push('<strong>Hauling downtime terdeteksi:</strong> '+hdtList.join(', ')+'.');
+    }
+
+    if (masalah.length === 0) masalah.push('✅ Tidak ditemukan masalah signifikan. Semua KPI mencapai target. Pertahankan kinerja ini.');
+
+    // — Rekomendasi —
+    var recs = [];
+
+    // Jika crushing belum capai target → hitung sisa jam & ton yang diperlukan
+    if (totTon < tonTarget && totOps > 0) {
+      var tonPerJam = totTon / totOps;
+      var jamTambahan = tonPerJam > 0 ? fmt(gapTonTarget / tonPerJam, 1) : '—';
+      recs.push('🎯 <strong>Kejar target produksi crushing '+fmtN(THRESH.TON_HARIAN.ok)+' ton/hari</strong> — kurang <strong class="badge-danger">'+fmtN(gapTonTarget)+' ton</strong>. Dengan rata-rata TPH saat ini ('+Math.round(avgTPH)+' t/j), dibutuhkan tambahan ±<strong>'+jamTambahan+' jam operasi efektif</strong>. Minimalkan semua downtime non-produktif dan pastikan umpan ROM konsisten.');
+    }
+
+    // Jika hauling belum capai target
+    if (totHaul < haulTarget) {
+      recs.push('🚛 <strong>Tingkatkan ritase hauling ke target '+fmtN(THRESH.TON_HARIAN.ok)+' ton/hari</strong> — masih kurang <strong class="badge-danger">'+fmtN(gapHaulTarget)+' ton</strong>. Evaluasi jumlah unit DT aktif, optimalkan jadwal trip, dan pastikan jalan hauling dalam kondisi baik. Koordinasikan dengan dispatcher untuk memprioritaskan trip dari stockpile.');
+    }
+
+    // Breakdown terbanyak
+    if (topBD.length > 0) {
+      var b0 = topBD[0];
+      recs.push('🔧 <strong>RCA & PM untuk "'+b0[1].label+'" (kode '+b0[0]+')</strong> — breakdown terbesar '+fmt(b0[1].dur,2)+' jam dalam '+b0[1].freq+' kejadian. Lakukan Root Cause Analysis, cek riwayat penggantian komponen, pastikan sparepart tersedia di gudang, dan jadwalkan PM terjadwal agar MA kembali ke target <strong>'+THRESH.MA.ok+'%</strong>.');
+      if (topBD.length > 1) {
+        var b1 = topBD[1];
+        recs.push('🔩 <strong>Tindaklanjuti "'+b1[1].label+'" (kode '+b1[0]+')</strong> — breakdown kedua '+fmt(b1[1].dur,2)+' jam. Evaluasi kondisi komponen, siapkan stok sparepart kritis, dan tetapkan MTTR (Mean Time To Repair) maksimum per shift.');
+      }
+    }
+
+    // MA di bawah 93%
+    if (maVal < THRESH.MA.ok) {
+      var bdHrsTarget = totEWH * (1 - THRESH.MA.ok/100);
+      recs.push('📋 <strong>Kurangi total jam breakdown agar MA ≥ '+THRESH.MA.ok+'%</strong> — saat ini BD = <strong>'+fmt(totBD,2)+' jam</strong>, target BD maksimal = <strong>'+fmt(bdHrsTarget,2)+' jam</strong> dari EWH '+fmt(totEWH,2)+' jam. Perketat program inspeksi harian, lakukan PM sesuai interval, dan laporkan setiap gejala abnormal sebelum eskalasi menjadi breakdown.');
+    }
+
+    // PA di bawah 93%
+    if (paVal < THRESH.PA.ok) {
+      recs.push('📊 <strong>Tingkatkan PA ke target '+THRESH.PA.ok+'%</strong> (saat ini '+fmt(paVal,1)+'%) — setiap supervisor shift wajib menjaga efisiensi pergantian shift, pastikan handover tidak memakan waktu berlebih, dan dokumentasikan setiap delay sebagai bahan evaluasi mingguan.');
+    }
+
+    // Standby dominan
+    if (uaVal < THRESH.UA.ok && topSTB.length > 0) {
+      var s0 = topSTB[0];
+      recs.push('⚡ <strong>Kurangi standby "'+s0[1].label+'" (kode '+s0[0]+')</strong> — '+fmt(s0[1].dur,2)+' jam terbuang. Tetapkan batas waktu maksimum per kejadian, siapkan contingency (backup unit/material), dan eskalasikan ke manajemen jika frekuensi melebihi '+s0[1].freq+'x/periode.');
+    }
+
+    // Hauling downtime
+    if (topHDT.length > 0 && topHDT[0][1].dur > 0.5) {
+      recs.push('🛣️ <strong>Atasi hauling downtime "'+topHDT[0][1].label+'"</strong> ('+fmt(topHDT[0][1].dur,2)+' jam, '+topHDT[0][1].freq+'x). Lakukan inspeksi rutin kondisi unit hauling, sediakan mekanik standby, dan review SOP penanganan breakdown unit DT di lapangan.');
+    }
+
+    // TPH di bawah target
+    if (avgTPH < THRESH.TPH.ok && avgTPH > 0) {
+      recs.push('📈 <strong>Optimasi throughput plant (TPH)</strong> — saat ini '+Math.round(avgTPH)+' t/j, target ≥'+THRESH.TPH.ok+' t/j. Cek setting CSS crusher, evaluasi gradasi batubara dari ROM, kalibrasi belt weigher TC01, dan pastikan tidak ada choke/block di chute atau transfer point.');
+    }
+
+    // Selalu ada
+    recs.push('📝 <strong>Disiplin pencatatan downtime per shift</strong> — isi kode, jam stop, jam start, dan keterangan secara akurat. Data yang lengkap memungkinkan analisa tren bulanan dan rencana PM yang lebih tepat sasaran untuk mempertahankan target PA & MA 93%.');
+
+    // — Perhatian Khusus —
+    var alert = [];
+    var hasCritical = false;
+
+    if (maVal < 70) {
+      hasCritical = true;
+      alert.push('🚨 <strong class="badge-danger">KRITIS — MA '+fmt(maVal,1)+'%:</strong> Jauh di bawah target 93%. Plant berisiko kehilangan produksi besar. Eskalasi ke tim maintenance dan manajemen segera. Stop semua pekerjaan non-prioritas dan fokus pada perbaikan komponen kritis.');
+    } else if (maVal < THRESH.MA.warn) {
+      hasCritical = true;
+      alert.push('🚨 <strong class="badge-danger">KRITIS — MA '+fmt(maVal,1)+'%:</strong> Di bawah ambang waspada 85%. Segera review program PM dan percepat perbaikan komponen yang menjadi penyebab breakdown.');
+    } else if (maVal < THRESH.MA.ok) {
+      alert.push('⚠️ <strong class="badge-warn">WASPADA — MA '+fmt(maVal,1)+'%:</strong> Belum mencapai target 93%. Pantau ketat dan percepat tindakan maintenance agar tidak turun lebih jauh.');
+    }
+
+    if (paVal < 70) {
+      hasCritical = true;
+      alert.push('🚨 <strong class="badge-danger">KRITIS — PA '+fmt(paVal,1)+'%:</strong> Plant tidak tersedia lebih dari 30% waktu tersedia. Evaluasi menyeluruh kondisi operasi diperlukan segera.');
+    } else if (paVal < THRESH.PA.warn) {
+      alert.push('⚠️ <strong class="badge-warn">WASPADA — PA '+fmt(paVal,1)+'%:</strong> Di bawah 85%, masih jauh dari target 93%. Tingkatkan koordinasi maintenance-operasi.');
+    } else if (paVal < THRESH.PA.ok) {
+      alert.push('⚠️ <strong class="badge-warn">PERHATIAN — PA '+fmt(paVal,1)+'%:</strong> Belum mencapai target 93%. Kurangi standby dan breakdown agar PA naik.');
+    }
+
+    if (totTon < tonTarget * 0.7) {
+      hasCritical = true;
+      alert.push('🚨 <strong class="badge-danger">KRITIS — Produksi hanya '+fmt(pctCrushCapai,1)+'% dari target:</strong> Realisasi crushing sangat jauh dari target '+fmtN(tonTarget)+' ton. Review ulang jadwal operasi dan kapasitas plant.');
+    } else if (totTon < tonTarget * 0.85) {
+      alert.push('⚠️ <strong class="badge-warn">WASPADA — Produksi '+fmt(pctCrushCapai,1)+'% dari target:</strong> Masih ada gap <strong>'+fmtN(gapTonTarget)+' ton</strong> dari target. Perlu upaya intensif untuk mengejar target.');
+    } else if (totTon < tonTarget) {
+      alert.push('📌 <strong class="badge-warn">MONITOR — Produksi '+fmt(pctCrushCapai,1)+'% dari target:</strong> Kurang <strong>'+fmtN(gapTonTarget)+' ton</strong> lagi untuk capai target. Jaga konsistensi operasi.');
+    }
+
+    if (bdJamHari > 3) {
+      hasCritical = true;
+      alert.push('🚨 <strong class="badge-danger">KRITIS — Breakdown '+fmt(bdJamHari,2)+' jam/hari:</strong> Rata-rata kehilangan produksi >3 jam/hari akibat breakdown. Dengan TPH '+Math.round(avgTPH)+' t/j, setara kehilangan <strong>±'+fmtN(bdJamHari*avgTPH)+' ton/hari</strong>.');
+    } else if (bdJamHari > 1.5) {
+      alert.push('⚠️ <strong class="badge-warn">WASPADA — Breakdown '+fmt(bdJamHari,2)+' jam/hari:</strong> Di atas threshold normal. Setara kehilangan ±'+fmtN(bdJamHari*avgTPH)+' ton/hari dari target produksi.');
+    }
+
+    if (topBD.length > 0 && topBD[0][1].freq >= 3) {
+      alert.push('⚠️ <strong class="badge-warn">BREAKDOWN BERULANG:</strong> "'+topBD[0][1].label+'" terjadi <strong>'+topBD[0][1].freq+'x</strong> dalam periode ini. Pola berulang = akar masalah belum tuntas. Lakukan RCA mendalam dan terapkan solusi permanen.');
+    }
+
+    if (pGap > 15) {
+      alert.push('⚠️ <strong class="badge-warn">GAP HAULING BESAR ('+fmt(pGap,1)+'%):</strong> '+fmtN(gapCH)+' ton belum ter-hauling. Risiko overflow stockpile — tingkatkan kapasitas hauling segera.');
+    }
+
+    if (uaVal < THRESH.UA.warn) {
+      alert.push('⚠️ <strong class="badge-warn">UA RENDAH ('+fmt(uaVal,1)+'%):</strong> Plant sering idle meski secara mekanik siap. Evaluasi faktor operasional yang menyebabkan standby berlebih.');
+    }
+
+    if (!hasCritical && alert.length === 0) {
+      alert.push('✅ <strong class="badge-ok">Tidak ada kondisi kritis.</strong> Semua KPI dalam rentang target. PA: '+fmt(paVal,1)+'% | MA: '+fmt(maVal,1)+'% | Crushing: '+fmtN(totTon)+' ton. Pertahankan kinerja dan lanjutkan program PM terjadwal.');
+    }
+
+    // ── 4. Build HTML ──────────────────────────────────────────────────────
+    var html = '';
+
+    html += '<h3>📊 Ringkasan Kinerja — Status: '+overallStatus+'</h3>'
+          + '<ul><li>'+ringkasan.join('</li><li>')+'</li></ul>';
+
+    html += '<h3>🔴 Masalah Utama & Akar Penyebab</h3>'
+          + '<ul><li>'+masalah.join('</li><li>')+'</li></ul>';
+
+    html += '<h3>✅ Rekomendasi Peningkatan Produksi</h3>';
+    recs.forEach(function(r,i) {
+      html += '<div class="rec-item"><span style="min-width:22px;font-weight:700;color:#a78bfa">'+(i+1)+'.</span><span>'+r+'</span></div>';
+    });
+
+    html += '<h3>⚠️ Perhatian Khusus</h3>'
+          + '<ul><li>'+alert.join('</li><li>')+'</li></ul>';
+
+    return { cards: cards, html: html };
+  }
+  </script>
+
 </div>
 
 
