@@ -1244,6 +1244,70 @@
         }
       ],
       "savedAt": "2026-05-06T09:55:39.588Z"
+    },
+    "B": {
+      "date": "2026-05-06",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 0,
+      "bwStop": 0,
+      "tonnage": 0,
+      "tph": 0,
+      "bwRows": [],
+      "hauling": 5100.049999999999,
+      "source": "PLK48, PLGLS",
+      "bsRows": [
+        {
+          "hauling": 3550.47,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        },
+        {
+          "hauling": 1549.58,
+          "source": "PLGLS",
+          "note": "TBCT 1 SOUTH 5B"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 0,
+      "bd": 0,
+      "ops": 12,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,40",
+          "dur": 0.67,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "Ress Time",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "3,20",
+          "start": "6,00",
+          "dur": 2.67,
+          "desc": "Hujan di TBCT",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-06T22:01:35.778Z"
     }
   }
 }
