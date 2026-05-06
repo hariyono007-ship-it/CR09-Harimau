@@ -1111,5 +1111,86 @@
       ],
       "savedAt": "2026-05-05T22:05:21.810Z"
     }
+  },
+  "2026-05-06": {
+    "A": {
+      "date": "2026-05-06",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 0,
+      "bwStop": 0,
+      "tonnage": 0,
+      "tph": 0,
+      "bwRows": [],
+      "hauling": 6200.36,
+      "source": "PLK48, PLK48, PLGLS",
+      "bsRows": [
+        {
+          "hauling": 744.08,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        },
+        {
+          "hauling": 2651.1,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        },
+        {
+          "hauling": 2805.18,
+          "source": "PLGLS",
+          "note": "TBCT 1 SOUTH 5B"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 0.58,
+      "bd": 0,
+      "ops": 11.42,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,35",
+          "dur": 0.58,
+          "desc": "",
+          "code": "600",
+          "delayDesJPC": "Stand By JPC - Refueling",
+          "descriptions": "Saat A2B dan DT refueling"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,35",
+          "dur": 0.58,
+          "desc": "P5M+P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "Rest time",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "Shift change",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-06T09:41:50.590Z"
+    }
   }
 }
