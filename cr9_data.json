@@ -1250,25 +1250,25 @@
       "shift": "B",
       "pit": "",
       "seam": "",
-      "bwStart": 3221188.75,
-      "bwStop": 3225640.25,
-      "tonnage": 6969.75,
-      "tph": 696.28,
+      "bwStart": 3264780.5,
+      "bwStop": 3268093,
+      "tonnage": 5392.75,
+      "tph": 634.44,
       "bwRows": [
         {
-          "source": "J6 PLK48",
-          "bwStart": 3221188.75,
-          "bwStop": 3225640.25,
-          "tonnage": 4451.5,
-          "tph": 444.71,
+          "source": "J7 PLK48",
+          "bwStart": 3264780.5,
+          "bwStop": 3268093,
+          "tonnage": 3312.5,
+          "tph": 389.71,
           "jam": ""
         },
         {
-          "source": "J8 PLHHS",
-          "bwStart": 3225648.25,
-          "bwStop": 3228166.5,
-          "tonnage": 2518.25,
-          "tph": 251.57,
+          "source": "J6 PLK48",
+          "bwStart": 3268093,
+          "bwStop": 3270173.25,
+          "tonnage": 2080.25,
+          "tph": 244.74,
           "jam": ""
         }
       ],
@@ -1289,20 +1289,29 @@
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
-      "stb": 1.99,
+      "stb": 3.5,
       "bd": 0,
-      "ops": 10.01,
+      "ops": 8.5,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
         {
           "stop": "18,00",
-          "start": "18,33",
-          "dur": 0.55,
+          "start": "18,37",
+          "dur": 0.62,
           "desc": "P5M+P2H",
           "code": "672",
           "delayDesJPC": "Overshift",
           "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "23,36",
+          "start": "24,00",
+          "dur": 0.4,
+          "desc": "",
+          "code": "744",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay karena hujan deras sehingga jalan menjadi licin"
         },
         {
           "stop": "0,00",
@@ -1314,18 +1323,27 @@
           "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
         },
         {
-          "stop": "2,11",
-          "start": "2,27",
-          "dur": 0.27,
+          "stop": "1,00",
+          "start": "1,38",
+          "dur": 0.63,
           "desc": "",
-          "code": "671",
-          "delayDesJPC": "Stand By JPC - Ganti Produk",
-          "descriptions": "Delay dikarenakan penggantian kualitas product"
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
         },
         {
-          "stop": "5,50",
+          "stop": "4,21",
+          "start": "5,00",
+          "dur": 0.65,
+          "desc": "",
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
+        },
+        {
+          "stop": "5,48",
           "start": "6,00",
-          "dur": 0.17,
+          "dur": 0.2,
           "desc": "",
           "code": "672",
           "delayDesJPC": "Overshift",
@@ -1361,7 +1379,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-06T22:13:21.979Z"
+      "savedAt": "2026-05-06T22:22:13.277Z"
     }
   }
 }
