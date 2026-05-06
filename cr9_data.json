@@ -1181,7 +1181,7 @@
           "stop": "6,56",
           "start": "7,35",
           "dur": 0.65,
-          "desc": "",
+          "desc": "JPC prepare Dumpingan",
           "code": "736",
           "delayDesJPC": "",
           "descriptions": "KPC sedang prepare dumping area di TBCT"
@@ -1243,7 +1243,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-06T09:53:33.632Z"
+      "savedAt": "2026-05-06T09:55:39.588Z"
     }
   }
 }
