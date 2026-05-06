@@ -1116,13 +1116,30 @@
     "A": {
       "date": "2026-05-06",
       "shift": "A",
-      "pit": "",
-      "seam": "",
-      "bwStart": 0,
-      "bwStop": 0,
-      "tonnage": 0,
-      "tph": 0,
-      "bwRows": [],
+      "pit": "J6+J7",
+      "seam": "PLK48",
+      "bwStart": 3259451,
+      "bwStop": 3263665.5,
+      "tonnage": 5329.5,
+      "tph": 564.57,
+      "bwRows": [
+        {
+          "source": "J7 PLK48",
+          "bwStart": 3259451,
+          "bwStop": 3263665.5,
+          "tonnage": 4214.5,
+          "tph": 446.45,
+          "jam": ""
+        },
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3263665.5,
+          "bwStop": 3264780.5,
+          "tonnage": 1115,
+          "tph": 118.11,
+          "jam": ""
+        }
+      ],
       "hauling": 6200.36,
       "source": "PLK48, PLK48, PLGLS",
       "bsRows": [
@@ -1145,9 +1162,9 @@
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
-      "stb": 0.58,
-      "bd": 0,
-      "ops": 11.42,
+      "stb": 2.53,
+      "bd": 0.03,
+      "ops": 9.44,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
@@ -1155,10 +1172,46 @@
           "stop": "6,00",
           "start": "6,35",
           "dur": 0.58,
+          "desc": "P5M+P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,56",
+          "start": "7,35",
+          "dur": 0.65,
           "desc": "",
-          "code": "600",
-          "delayDesJPC": "Stand By JPC - Refueling",
-          "descriptions": "Saat A2B dan DT refueling"
+          "code": "736",
+          "delayDesJPC": "",
+          "descriptions": "KPC sedang prepare dumping area di TBCT"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "16,01",
+          "start": "16,03",
+          "dur": 0.03,
+          "desc": "",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "17,42",
+          "start": "18,00",
+          "dur": 0.3,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
         }
       ],
       "haulingDtRows": [
@@ -1190,7 +1243,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-06T09:41:50.590Z"
+      "savedAt": "2026-05-06T09:53:33.632Z"
     }
   }
 }
