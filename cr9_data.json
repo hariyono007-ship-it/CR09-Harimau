@@ -1642,28 +1642,39 @@
       "pit": "",
       "seam": "",
       "bwStart": 3285195.25,
-      "bwStop": 0,
-      "tonnage": 0,
-      "tph": 0,
+      "bwStop": 3290435.5,
+      "tonnage": 5240.25,
+      "tph": 612.89,
       "bwRows": [
         {
           "source": "J6 PLK48",
           "bwStart": 3285195.25,
-          "bwStop": 0,
-          "tonnage": 0,
-          "tph": 0,
+          "bwStop": 3290435.5,
+          "tonnage": 5240.25,
+          "tph": 612.89,
           "jam": ""
         }
       ],
-      "hauling": 0,
-      "source": "",
-      "bsRows": [],
-      "supvFP": "",
-      "supvCR": "",
+      "hauling": 6082.139999999999,
+      "source": "PLK48, PLK48",
+      "bsRows": [
+        {
+          "hauling": 3518.6,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        },
+        {
+          "hauling": 2563.54,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        }
+      ],
+      "supvFP": "Sutran Hendra",
+      "supvCR": "Bahtriani",
       "ewh": 12,
-      "stb": 3.22,
+      "stb": 3.45,
       "bd": 0,
-      "ops": 8.78,
+      "ops": 8.55,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
@@ -1720,10 +1731,47 @@
           "code": "647",
           "delayDesJPC": "Stand By JPC - Belt Tracking",
           "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+        },
+        {
+          "stop": "17,46",
+          "start": "18,00",
+          "dur": 0.23,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
         }
       ],
-      "haulingDtRows": [],
-      "savedAt": "2026-05-08T09:08:50.919Z"
+      "haulingDtRows": [
+        {
+          "stop": "06,00",
+          "start": "6,40",
+          "dur": 0.67,
+          "desc": "P5M+P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "11,30",
+          "start": "13,30",
+          "dur": 2,
+          "desc": "Friday break",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "Shift change",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-08T09:53:42.272Z"
     }
   }
 }
