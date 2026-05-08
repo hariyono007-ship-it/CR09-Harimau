@@ -1634,5 +1634,96 @@
       ],
       "savedAt": "2026-05-07T22:03:07.271Z"
     }
+  },
+  "2026-05-08": {
+    "A": {
+      "date": "2026-05-08",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3285195.25,
+      "bwStop": 0,
+      "tonnage": 0,
+      "tph": 0,
+      "bwRows": [
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3285195.25,
+          "bwStop": 0,
+          "tonnage": 0,
+          "tph": 0,
+          "jam": ""
+        }
+      ],
+      "hauling": 0,
+      "source": "",
+      "bsRows": [],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 3.22,
+      "bd": 0,
+      "ops": 8.78,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,20",
+          "dur": 0.33,
+          "desc": "P5M",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,20",
+          "start": "6,50",
+          "dur": 0.5,
+          "desc": "P2H",
+          "code": "631",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay karena ganti produk"
+        },
+        {
+          "stop": "6,50",
+          "start": "7,11",
+          "dur": 0.35,
+          "desc": "Air surut di pay pond, dust control tidak bisa aktif",
+          "code": "739",
+          "delayDesJPC": "",
+          "descriptions": "Delay lain-lain"
+        },
+        {
+          "stop": "11,30",
+          "start": "13,30",
+          "dur": 2,
+          "desc": "Friday break",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "14,00",
+          "start": "14,01",
+          "dur": 0.02,
+          "desc": "",
+          "code": "647",
+          "delayDesJPC": "Stand By JPC - Belt Tracking",
+          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+        },
+        {
+          "stop": "14,16",
+          "start": "14,17",
+          "dur": 0.02,
+          "desc": "",
+          "code": "647",
+          "delayDesJPC": "Stand By JPC - Belt Tracking",
+          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+        }
+      ],
+      "haulingDtRows": [],
+      "savedAt": "2026-05-08T09:08:50.919Z"
+    }
   }
 }
