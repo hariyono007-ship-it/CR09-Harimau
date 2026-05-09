@@ -1772,6 +1772,121 @@
         }
       ],
       "savedAt": "2026-05-08T09:53:42.272Z"
+    },
+    "B": {
+      "date": "2026-05-08",
+      "shift": "B",
+      "pit": "J8",
+      "seam": "PLGHS",
+      "bwStart": 3290435.5,
+      "bwStop": 3297511.75,
+      "tonnage": 7076.25,
+      "tph": 772.52,
+      "bwRows": [
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3290435.5,
+          "bwStop": 3297511.75,
+          "tonnage": 7076.25,
+          "tph": 772.52,
+          "jam": ""
+        }
+      ],
+      "hauling": 5450.820000000001,
+      "source": "PLK48, PLK48, PLGHS",
+      "bsRows": [
+        {
+          "hauling": 1450.86,
+          "source": "PLK48",
+          "note": "TBCT 1 SOUTH 5B"
+        },
+        {
+          "hauling": 3779.94,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        },
+        {
+          "hauling": 220.02,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        }
+      ],
+      "supvFP": "Satria",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 2.84,
+      "bd": 0,
+      "ops": 9.16,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "19,30",
+          "dur": 1.5,
+          "desc": "Sosialisasi fatality ,materi by PT KPC",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "19,20",
+          "start": "19,30",
+          "dur": 0.17,
+          "desc": "P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "19,30",
+          "dur": 1.5,
+          "desc": "Sosialisasi fatality",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-09T00:22:41.237Z"
     }
   }
 }
