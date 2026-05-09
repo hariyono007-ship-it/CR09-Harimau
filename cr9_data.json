@@ -1888,5 +1888,63 @@
       ],
       "savedAt": "2026-05-09T00:22:41.237Z"
     }
+  },
+  "2026-05-09": {
+    "A": {
+      "date": "2026-05-09",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 0,
+      "bwStop": 0,
+      "tonnage": 0,
+      "tph": 0,
+      "bwRows": [],
+      "hauling": 6571.96,
+      "source": "PLGHS, PLK48, PLK48, PLGHS",
+      "bsRows": [
+        {
+          "hauling": 74.42,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        },
+        {
+          "hauling": 347.96,
+          "source": "PLK48",
+          "note": "TBCT 1 SOUTH 5B"
+        },
+        {
+          "hauling": 447.7,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        },
+        {
+          "hauling": 5701.88,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 5B"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 0,
+      "bd": 0,
+      "ops": 12,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "",
+          "dur": 0,
+          "desc": "",
+          "code": "731",
+          "deskripsi": "Hauling Road Maintenance",
+          "digunakanSaat": "Ada perbaikan di jalan hauling"
+        }
+      ],
+      "savedAt": "2026-05-09T09:42:25.076Z"
+    }
   }
 }
