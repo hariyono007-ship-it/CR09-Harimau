@@ -2054,6 +2054,102 @@
         }
       ],
       "savedAt": "2026-05-09T10:04:17.164Z"
+    },
+    "B": {
+      "date": "2026-05-09",
+      "shift": "B",
+      "pit": "J8",
+      "seam": "PLGHS",
+      "bwStart": 3302088.25,
+      "bwStop": 3305275.5,
+      "tonnage": 3187.25,
+      "tph": 830.01,
+      "bwRows": [
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3302088.25,
+          "bwStop": 3305275.5,
+          "tonnage": 3187.25,
+          "tph": 830.01,
+          "jam": ""
+        }
+      ],
+      "hauling": 2878.48,
+      "source": "PLGHS",
+      "bsRows": [
+        {
+          "hauling": 2878.48,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTHH 5B"
+        }
+      ],
+      "supvFP": "Sutran Hendra",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 8.16,
+      "bd": 0,
+      "ops": 3.84,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,05",
+          "dur": 0.08,
+          "desc": "P5M",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "18,05",
+          "start": "18,30",
+          "dur": 0.42,
+          "desc": "P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "19,35",
+          "start": "20,40",
+          "dur": 1.08,
+          "desc": "BLACK OUT",
+          "code": "735",
+          "delayDesJPC": "Power Black Out",
+          "descriptions": "Delay diakibatkan tidak adanya supply listrik dari power station"
+        },
+        {
+          "stop": "23,25",
+          "start": "6,00",
+          "dur": 6.58,
+          "desc": "",
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,30",
+          "dur": 0.5,
+          "desc": "P5M+P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "23,25",
+          "start": "6,00",
+          "dur": 6.58,
+          "desc": "HEAVY RAIN",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-09T22:03:09.063Z"
     }
   }
 }
