@@ -2151,5 +2151,126 @@
       ],
       "savedAt": "2026-05-09T22:03:09.063Z"
     }
+  },
+  "2026-05-10": {
+    "A": {
+      "date": "2026-05-10",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3305275.5,
+      "bwStop": 3310334.5,
+      "tonnage": 5059,
+      "tph": 1168.36,
+      "bwRows": [
+        {
+          "source": "J8 PLGHS",
+          "bwStart": 3305275.5,
+          "bwStop": 3310334.5,
+          "tonnage": 5059,
+          "tph": 1168.36,
+          "jam": ""
+        }
+      ],
+      "hauling": 4588.76,
+      "source": "PLGHS, PLK48",
+      "bsRows": [
+        {
+          "hauling": 3095.02,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        },
+        {
+          "hauling": 1493.74,
+          "source": "PLK48",
+          "note": "TBCT 2 SOUTH 5"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 7.67,
+      "bd": 0,
+      "ops": 4.33,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,50",
+          "dur": 0.83,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,50",
+          "start": "12,00",
+          "dur": 5.17,
+          "desc": "",
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "13,00",
+          "start": "13,30",
+          "dur": 0.5,
+          "desc": "",
+          "code": "736",
+          "delayDesJPC": "",
+          "descriptions": "KPC sedang prepare dumping area di TBCT"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,52",
+          "dur": 0.87,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "6,52",
+          "start": "13,00",
+          "dur": 6.13,
+          "desc": "RAIN",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-10T22:03:50.333Z"
+    }
   }
 }
