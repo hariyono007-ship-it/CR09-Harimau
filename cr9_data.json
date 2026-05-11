@@ -2520,11 +2520,20 @@
       "shift": "B",
       "pit": "",
       "seam": "",
-      "bwStart": 0,
-      "bwStop": 0,
-      "tonnage": 0,
-      "tph": 0,
-      "bwRows": [],
+      "bwStart": 3325884.25,
+      "bwStop": 3333377.25,
+      "tonnage": 7493,
+      "tph": 752.31,
+      "bwRows": [
+        {
+          "source": "J8 PLGH",
+          "bwStart": 3325884.25,
+          "bwStop": 3333377.25,
+          "tonnage": 7493,
+          "tph": 752.31,
+          "jam": ""
+        }
+      ],
       "hauling": 7458.58,
       "source": "PLGHS, PLGHS",
       "bsRows": [
@@ -2542,29 +2551,56 @@
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
-      "stb": 1.67,
+      "stb": 2.04,
       "bd": 0,
-      "ops": 10.33,
+      "ops": 9.96,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
         {
           "stop": "18,00",
-          "start": "18,40",
-          "dur": 0.67,
+          "start": "18,05",
+          "dur": 0.08,
           "desc": "P5M",
           "code": "672",
           "delayDesJPC": "Overshift",
           "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
         },
         {
-          "stop": "O,00",
+          "stop": "18,05",
+          "start": "18,39",
+          "dur": 0.57,
+          "desc": "P2H",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "0,00",
           "start": "1,00",
           "dur": 1,
           "desc": "",
-          "code": "600",
-          "delayDesJPC": "Stand By JPC - Refueling",
-          "descriptions": "Saat A2B dan DT refueling"
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "4,15",
+          "start": "4,28",
+          "dur": 0.22,
+          "desc": "PRIMARY CRUSHER",
+          "code": "625",
+          "delayDesJPC": "Crusher Block - (Contaminant)",
+          "descriptions": "Delay karena Stop yang terjadi karena crusher block dan action penanganannya"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
         }
       ],
       "haulingDtRows": [
@@ -2596,7 +2632,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-11T21:56:49.176Z"
+      "savedAt": "2026-05-11T22:01:01.459Z"
     }
   }
 }
