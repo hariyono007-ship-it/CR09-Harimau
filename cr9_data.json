@@ -2514,6 +2514,89 @@
         }
       ],
       "savedAt": "2026-05-11T09:54:09.935Z"
+    },
+    "B": {
+      "date": "2026-05-11",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 0,
+      "bwStop": 0,
+      "tonnage": 0,
+      "tph": 0,
+      "bwRows": [],
+      "hauling": 7458.58,
+      "source": "PLGHS, PLGHS",
+      "bsRows": [
+        {
+          "hauling": 4268.9,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        },
+        {
+          "hauling": 3189.68,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 5B"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 1.67,
+      "bd": 0,
+      "ops": 10.33,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,40",
+          "dur": 0.67,
+          "desc": "P5M",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "O,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "600",
+          "delayDesJPC": "Stand By JPC - Refueling",
+          "descriptions": "Saat A2B dan DT refueling"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,40",
+          "dur": 0.67,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "O,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "6,00",
+          "dur": 12.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-11T21:56:49.176Z"
     }
   }
 }
