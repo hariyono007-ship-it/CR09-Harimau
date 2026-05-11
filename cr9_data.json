@@ -2386,8 +2386,8 @@
       "seam": "",
       "bwStart": 3316661,
       "bwStop": 3317678.75,
-      "tonnage": 1017.75,
-      "tph": 120.73,
+      "tonnage": 9223.25,
+      "tph": 1094.1,
       "bwRows": [
         {
           "source": "PLK48",
@@ -2395,6 +2395,14 @@
           "bwStop": 3317678.75,
           "tonnage": 1017.75,
           "tph": 120.73,
+          "jam": ""
+        },
+        {
+          "source": "PLGHS",
+          "bwStart": 3317678.75,
+          "bwStop": 3325884.25,
+          "tonnage": 8205.5,
+          "tph": 973.37,
           "jam": ""
         }
       ],
@@ -2505,7 +2513,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-11T09:49:31.238Z"
+      "savedAt": "2026-05-11T09:54:09.935Z"
     }
   }
 }
