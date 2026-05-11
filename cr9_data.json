@@ -2387,14 +2387,14 @@
       "bwStart": 3316661,
       "bwStop": 3317678.75,
       "tonnage": 1017.75,
-      "tph": 118.34,
+      "tph": 120.73,
       "bwRows": [
         {
           "source": "PLK48",
           "bwStart": 3316661,
           "bwStop": 3317678.75,
           "tonnage": 1017.75,
-          "tph": 118.34,
+          "tph": 120.73,
           "jam": ""
         }
       ],
@@ -2415,9 +2415,9 @@
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
-      "stb": 2.5,
+      "stb": 2.67,
       "bd": 0.9,
-      "ops": 8.6,
+      "ops": 8.43,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
@@ -2465,6 +2465,15 @@
           "code": "673",
           "delayDesJPC": "Break (Rest & Prayer)",
           "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
         }
       ],
       "haulingDtRows": [
@@ -2496,7 +2505,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-11T09:48:43.581Z"
+      "savedAt": "2026-05-11T09:49:31.238Z"
     }
   }
 }
