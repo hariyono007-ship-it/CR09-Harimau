@@ -1391,14 +1391,14 @@
       "bwStart": 3270173.25,
       "bwStop": 3277996.75,
       "tonnage": 7823.5,
-      "tph": 0,
+      "tph": 936.95,
       "bwRows": [
         {
           "source": "J8 PLGHS",
           "bwStart": 3270173.25,
           "bwStop": 3277996.75,
           "tonnage": 7823.5,
-          "tph": 0,
+          "tph": 936.95,
           "jam": ""
         }
       ],
@@ -1419,16 +1419,16 @@
       "supvFP": "SUTRAN HENDRA",
       "supvCR": "BAHRIANI",
       "ewh": 12,
-      "stb": 21.65,
+      "stb": 3.65,
       "bd": 0,
-      "ops": 0,
+      "ops": 8.35,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
         {
-          "stop": "06,00",
-          "start": "O6,50",
-          "dur": 18.83,
+          "stop": "06:00",
+          "start": "06:50",
+          "dur": 0.83,
           "desc": "P5M+P2H",
           "code": "672",
           "delayDesJPC": "Overshift",
@@ -1518,7 +1518,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-07T09:57:05.622Z"
+      "savedAt": "2026-05-14T10:42:25.488Z"
     },
     "B": {
       "date": "2026-05-07",
