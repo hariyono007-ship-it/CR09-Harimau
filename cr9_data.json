@@ -2927,5 +2927,130 @@
       ],
       "savedAt": "2026-05-14T01:06:42.518Z"
     }
+  },
+  "2026-05-13": {
+    "A": {
+      "date": "2026-05-13",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3349462.5,
+      "bwStop": 3350865.25,
+      "tonnage": 1402.75,
+      "tph": 865.9,
+      "bwRows": [
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3349462.5,
+          "bwStop": 3350865.25,
+          "tonnage": 1402.75,
+          "tph": 865.9,
+          "jam": ""
+        }
+      ],
+      "hauling": 5197.44,
+      "source": "PLK48",
+      "bsRows": [
+        {
+          "hauling": 5197.44,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        }
+      ],
+      "supvFP": "SATRIA",
+      "supvCR": "BAHRIANI",
+      "ewh": 12,
+      "stb": 1,
+      "bd": 9.38,
+      "ops": 1.62,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,20",
+          "dur": 0.33,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,20",
+          "start": "7,00",
+          "dur": 0.67,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "8,08",
+          "start": "8,10",
+          "dur": 0.03,
+          "desc": "",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "8,23",
+          "start": "8,24",
+          "dur": 0.02,
+          "desc": "",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "8,24",
+          "start": "9,09",
+          "dur": 0.75,
+          "desc": "",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        },
+        {
+          "stop": "9,25",
+          "start": "18,00",
+          "dur": 8.58,
+          "desc": "Ganti rantai 5 link",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,30",
+          "dur": 0.5,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-14T01:16:58.426Z"
+    }
   }
 }
