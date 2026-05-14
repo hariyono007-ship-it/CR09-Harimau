@@ -3336,6 +3336,177 @@
         }
       ],
       "savedAt": "2026-05-14T22:44:27.673Z"
+    },
+    "B": {
+      "date": "2026-05-14",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3365804.75,
+      "bwStop": 3367542.25,
+      "tonnage": 4830,
+      "tph": 536.07,
+      "bwRows": [
+        {
+          "source": "PELIKAN 48 J.07",
+          "bwStart": 3365804.75,
+          "bwStop": 3367542.25,
+          "tonnage": 1737.5,
+          "tph": 192.84,
+          "jam": ""
+        },
+        {
+          "source": "PLGLS J.09",
+          "bwStart": 3367542.25,
+          "bwStop": 3369494,
+          "tonnage": 1951.75,
+          "tph": 216.62,
+          "jam": ""
+        },
+        {
+          "source": "PELIKAN J.06",
+          "bwStart": 3369494,
+          "bwStop": 3370634.75,
+          "tonnage": 1140.75,
+          "tph": 126.61,
+          "jam": ""
+        }
+      ],
+      "hauling": 7492.26,
+      "source": "PELIKAN 48, PLGLS",
+      "bsRows": [
+        {
+          "hauling": 2163.38,
+          "source": "PELIKAN 48",
+          "note": "TBCT 2 NORTH 2"
+        },
+        {
+          "hauling": 5328.88,
+          "source": "PLGLS",
+          "note": "TBCT 1 SOUTH 5 B"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 2.99,
+      "bd": 0,
+      "ops": 9.01,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18:00",
+          "start": "18:10",
+          "dur": 0.17,
+          "desc": "P5M",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "18:10",
+          "start": "18:40",
+          "dur": 0.5,
+          "desc": "P2H",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "18:40",
+          "start": "19:05",
+          "dur": 0.42,
+          "desc": "PREPARATION",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "21:44",
+          "start": "21:48",
+          "dur": 0.07,
+          "desc": "CV01 TERKENA MATERIAL",
+          "code": "647",
+          "delayDesJPC": "Stand By JPC - Belt Tracking",
+          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+        },
+        {
+          "stop": "22:05",
+          "start": "22:20",
+          "dur": 0.25,
+          "desc": "",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "00:00",
+          "start": "01:00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "03:06",
+          "start": "03:21",
+          "dur": 0.25,
+          "desc": "",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "05:40",
+          "start": "06:00",
+          "dur": 0.33,
+          "desc": "",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18:00",
+          "start": "18:10",
+          "dur": 0.17,
+          "desc": "P5M",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "18:10",
+          "start": "18:40",
+          "dur": 0.5,
+          "desc": "P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "00:00",
+          "start": "01:00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "05:40",
+          "start": "06:00",
+          "dur": 0.33,
+          "desc": "OVERSHIFT",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-14T22:54:30.561Z"
     }
   }
 }
