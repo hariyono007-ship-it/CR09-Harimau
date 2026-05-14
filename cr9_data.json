@@ -3051,6 +3051,129 @@
         }
       ],
       "savedAt": "2026-05-14T01:16:58.426Z"
+    },
+    "B": {
+      "date": "2026-05-13",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3350865.25,
+      "bwStop": 3357890.5,
+      "tonnage": 7025.25,
+      "tph": 784.07,
+      "bwRows": [
+        {
+          "source": "J7PLK48",
+          "bwStart": 3350865.25,
+          "bwStop": 3357890.5,
+          "tonnage": 7025.25,
+          "tph": 784.07,
+          "jam": ""
+        }
+      ],
+      "hauling": 7209.58,
+      "source": "PLK48",
+      "bsRows": [
+        {
+          "hauling": 7209.58,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        }
+      ],
+      "supvFP": "SUTRAN HENDRA",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 1.84,
+      "bd": 1.2,
+      "ops": 8.96,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,10",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "18,10",
+          "start": "18,40",
+          "dur": 0.5,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "20,56",
+          "start": "21,25",
+          "dur": 0.48,
+          "desc": "",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "3,50",
+          "start": "4,33",
+          "dur": 0.72,
+          "desc": "",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,40",
+          "dur": 0.67,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-14T01:21:57.652Z"
     }
   }
 }
