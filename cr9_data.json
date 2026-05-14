@@ -3182,85 +3182,96 @@
       "shift": "A",
       "pit": "",
       "seam": "",
-      "bwStart": 3357890.5,
-      "bwStop": 3362206,
-      "tonnage": 7914.25,
-      "tph": 821.83,
+      "bwStart": 3365804.75,
+      "bwStop": 3367542.25,
+      "tonnage": 4830,
+      "tph": 536.07,
       "bwRows": [
         {
           "source": "PELIKAN 48 J.07",
-          "bwStart": 3357890.5,
-          "bwStop": 3362206,
-          "tonnage": 4315.5,
-          "tph": 448.13,
+          "bwStart": 3365804.75,
+          "bwStop": 3367542.25,
+          "tonnage": 1737.5,
+          "tph": 192.84,
           "jam": ""
         },
         {
-          "source": "PELIKAN 48 J.09",
-          "bwStart": 3362206,
-          "bwStop": 3365804.75,
-          "tonnage": 3598.75,
-          "tph": 373.7,
+          "source": "PLGLS J.09",
+          "bwStart": 3367542.25,
+          "bwStop": 3369494,
+          "tonnage": 1951.75,
+          "tph": 216.62,
+          "jam": ""
+        },
+        {
+          "source": "PELIKAN 48",
+          "bwStart": 3369494,
+          "bwStop": 3370634.75,
+          "tonnage": 1140.75,
+          "tph": 126.61,
           "jam": ""
         }
       ],
-      "hauling": 6351.76,
-      "source": "PELIKAN 48",
-      "bsRows": [
-        {
-          "hauling": 6351.76,
-          "source": "PELIKAN 48",
-          "note": "TBCT 2 NORTH 2"
-        }
-      ],
+      "hauling": 0,
+      "source": "",
+      "bsRows": [],
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
-      "stb": 2.37,
+      "stb": 2.99,
       "bd": 0,
-      "ops": 9.63,
+      "ops": 9.01,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
         {
-          "stop": "06:00",
-          "start": "06:23",
-          "dur": 0.38,
+          "stop": "18:00",
+          "start": "18:10",
+          "dur": 0.17,
           "desc": "P5M",
           "code": "699",
           "delayDesJPC": "",
           "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
         },
         {
-          "stop": "06:23",
-          "start": "07:09",
-          "dur": 0.77,
+          "stop": "18:10",
+          "start": "18:40",
+          "dur": 0.5,
           "desc": "P2H",
           "code": "699",
           "delayDesJPC": "",
           "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
         },
         {
-          "stop": "07:39",
-          "start": "07:41",
-          "dur": 0.03,
-          "desc": "PULL CORD TERKENA MATERIAL CV01",
-          "code": "647",
-          "delayDesJPC": "Stand By JPC - Belt Tracking",
-          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+          "stop": "18:40",
+          "start": "19:05",
+          "dur": 0.42,
+          "desc": "PREPARATION",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
         },
         {
-          "stop": "10:10",
-          "start": "10:11",
-          "dur": 0.02,
-          "desc": "PULL CORD TERKENA MATERIAL CV01",
-          "code": "647",
-          "delayDesJPC": "Stand By JPC - Belt Tracking",
-          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+          "stop": "21:44",
+          "start": "21:48",
+          "dur": 0.07,
+          "desc": "PULL CORD CV01 TERKENA MATERAIL",
+          "code": "600",
+          "delayDesJPC": "Stand By JPC - Refueling",
+          "descriptions": "Saat A2B dan DT refueling"
         },
         {
-          "stop": "12:00",
-          "start": "13:00",
+          "stop": "22:05",
+          "start": "22:20",
+          "dur": 0.25,
+          "desc": "",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "00:00",
+          "start": "01:00",
           "dur": 1,
           "desc": "",
           "code": "673",
@@ -3268,9 +3279,18 @@
           "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
         },
         {
-          "stop": "17:50",
-          "start": "18:00",
-          "dur": 0.17,
+          "stop": "03:06",
+          "start": "03:21",
+          "dur": 0.25,
+          "desc": "",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "05:40",
+          "start": "06:00",
+          "dur": 0.33,
           "desc": "",
           "code": "672",
           "delayDesJPC": "Overshift",
@@ -3279,26 +3299,26 @@
       ],
       "haulingDtRows": [
         {
-          "stop": "06:00",
-          "start": "06:27",
-          "dur": 0.45,
+          "stop": "18:00",
+          "start": "18:10",
+          "dur": 0.17,
           "desc": "P5M",
           "code": "739",
           "deskripsi": "Other Ops",
           "digunakanSaat": "Delay lain-lain"
         },
         {
-          "stop": "06:27",
-          "start": "06:37",
-          "dur": 0.17,
+          "stop": "18:10",
+          "start": "18:40",
+          "dur": 0.5,
           "desc": "P2H",
           "code": "739",
           "deskripsi": "Other Ops",
           "digunakanSaat": "Delay lain-lain"
         },
         {
-          "stop": "12:00",
-          "start": "13:00",
+          "stop": "00:00",
+          "start": "01:00",
           "dur": 1,
           "desc": "",
           "code": "739",
@@ -3306,16 +3326,16 @@
           "digunakanSaat": "Delay lain-lain"
         },
         {
-          "stop": "17:40",
-          "start": "18:00",
+          "stop": "05:40",
+          "start": "06:00",
           "dur": 0.33,
-          "desc": "OVERSHIFT",
+          "desc": "",
           "code": "739",
           "deskripsi": "Other Ops",
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-14T10:07:27.093Z"
+      "savedAt": "2026-05-14T22:44:27.673Z"
     }
   }
 }
