@@ -3175,5 +3175,41 @@
       ],
       "savedAt": "2026-05-14T01:21:57.652Z"
     }
+  },
+  "2026-05-14": {
+    "A": {
+      "date": "2026-05-14",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 1234,
+      "bwStop": 1239,
+      "tonnage": 5,
+      "tph": 0.42,
+      "bwRows": [
+        {
+          "source": "testing",
+          "bwStart": 1234,
+          "bwStop": 1239,
+          "tonnage": 5,
+          "tph": 0.42,
+          "jam": ""
+        }
+      ],
+      "hauling": 0,
+      "source": "",
+      "bsRows": [],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 0,
+      "bd": 0,
+      "ops": 12,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [],
+      "haulingDtRows": [],
+      "savedAt": "2026-05-14T02:45:33.681Z"
+    }
   }
 }
