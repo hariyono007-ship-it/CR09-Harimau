@@ -1499,7 +1499,7 @@ function dismissInstallBanner() {
     ringkasan.push('Total breakdown (BD): <strong>'+fmt(totBD,2)+' jam</strong> ('+fmt(bdJamHari,2)+' jam/hari), total standby (STB): <strong>'+fmt(totSTB,2)+' jam</strong> ('+fmt(stbJamHari,2)+' jam/hari).');
 
     // ── Target periode ────────────────────────────────────────────────────────
-    var tonTarget  = THRESH.TON_HARIAN.ok * nDays;   // 13.000 × n hari
+    var tonTarget  = THRESH.TON_HARIAN.ok * nDays;   // 14.500 × n hari
     var haulTarget = THRESH.TON_HARIAN.ok * nDays;
     var gapTonTarget  = tonTarget  - totTon;
     var gapHaulTarget = haulTarget - totHaul;
