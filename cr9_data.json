@@ -3498,14 +3498,14 @@
       "bwStart": 3370634.75,
       "bwStop": 3373942.5,
       "tonnage": 3307.75,
-      "tph": 0,
+      "tph": 632.46,
       "bwRows": [
         {
           "source": "PELIKAN 48 J.06",
           "bwStart": 3370634.75,
           "bwStop": 3373942.5,
           "tonnage": 3307.75,
-          "tph": 0,
+          "tph": 632.46,
           "jam": ""
         }
       ],
@@ -3521,9 +3521,9 @@
       "supvFP": "",
       "supvCR": "",
       "ewh": 12,
-      "stb": 95.58,
+      "stb": 5.58,
       "bd": 1.19,
-      "ops": 0,
+      "ops": 5.23,
       "remarkMaint": "",
       "remarkGen": "",
       "dtRows": [
@@ -3538,8 +3538,8 @@
         },
         {
           "stop": "06:06",
-          "start": "97:11",
-          "dur": 91.08,
+          "start": "07:11",
+          "dur": 1.08,
           "desc": "P2H",
           "code": "699",
           "delayDesJPC": "",
@@ -3647,7 +3647,7 @@
           "digunakanSaat": "Delay lain-lain"
         }
       ],
-      "savedAt": "2026-05-15T09:48:46.154Z"
+      "savedAt": "2026-05-15T09:50:20.756Z"
     }
   }
 }
