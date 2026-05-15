@@ -3488,5 +3488,166 @@
       ],
       "savedAt": "2026-05-14T22:54:30.561Z"
     }
+  },
+  "2026-05-15": {
+    "A": {
+      "date": "2026-05-15",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3370634.75,
+      "bwStop": 3373942.5,
+      "tonnage": 3307.75,
+      "tph": 0,
+      "bwRows": [
+        {
+          "source": "PELIKAN 48 J.06",
+          "bwStart": 3370634.75,
+          "bwStop": 3373942.5,
+          "tonnage": 3307.75,
+          "tph": 0,
+          "jam": ""
+        }
+      ],
+      "hauling": 4489.68,
+      "source": "PELIKAN 48",
+      "bsRows": [
+        {
+          "hauling": 4489.68,
+          "source": "PELIKAN 48",
+          "note": "TBCT 2 NORTH 2"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 95.58,
+      "bd": 1.19,
+      "ops": 0,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "06:00",
+          "start": "06:06",
+          "dur": 0.1,
+          "desc": "P5M",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "06:06",
+          "start": "97:11",
+          "dur": 91.08,
+          "desc": "P2H",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "07:41",
+          "start": "08:09",
+          "dur": 0.47,
+          "desc": "CHAIN FEEDER TRIPPED",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "09:05",
+          "start": "09:07",
+          "dur": 0.03,
+          "desc": "CV01 TERKENA MATERIAL",
+          "code": "647",
+          "delayDesJPC": "Stand By JPC - Belt Tracking",
+          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+        },
+        {
+          "stop": "11:30",
+          "start": "13:30",
+          "dur": 2,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "14:49",
+          "start": "15:32",
+          "dur": 0.72,
+          "desc": "CHAIN FEEDER TRIPPED",
+          "code": "848",
+          "delayDesJPC": "Trouble Mechanical - Adjust Skirt Board",
+          "descriptions": "Adjust skirt board"
+        },
+        {
+          "stop": "15:38",
+          "start": "18:00",
+          "dur": 2.37,
+          "desc": "",
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "06:00",
+          "start": "06:21",
+          "dur": 0.35,
+          "desc": "P5M",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "06:@1",
+          "start": "06:31",
+          "dur": 0,
+          "desc": "P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "09:10",
+          "start": "09:38",
+          "dur": 0.47,
+          "desc": "JALAN LICIN",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "11:30",
+          "start": "13:30",
+          "dur": 2,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "13:30",
+          "start": "15:30",
+          "dur": 2,
+          "desc": "HEAVY RAIN",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "15:30",
+          "start": "18:00",
+          "dur": 2.5,
+          "desc": "CHANGE SHIFT",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-15T09:48:46.154Z"
+    }
   }
 }
