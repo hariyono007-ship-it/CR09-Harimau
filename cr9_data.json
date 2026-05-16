@@ -2635,254 +2635,6 @@
       "savedAt": "2026-05-11T22:01:01.459Z"
     }
   },
-  "2026-05-13": {
-    "A": {
-      "date": "2026-05-13",
-      "shift": "A",
-      "pit": "",
-      "seam": "",
-      "bwStart": 3349462.5,
-      "bwStop": 3350865.25,
-      "tonnage": 1402.75,
-      "tph": 865.9,
-      "bwRows": [
-        {
-          "source": "J6 PLK48",
-          "bwStart": 3349462.5,
-          "bwStop": 3350865.25,
-          "tonnage": 1402.75,
-          "tph": 865.9,
-          "jam": ""
-        }
-      ],
-      "hauling": 5197.44,
-      "source": "PLK48",
-      "bsRows": [
-        {
-          "hauling": 5197.44,
-          "source": "PLK48",
-          "note": "TBCT 2 NORTH 2"
-        }
-      ],
-      "supvFP": "SATRIA",
-      "supvCR": "BAHRIANI",
-      "ewh": 12,
-      "stb": 1,
-      "bd": 9.38,
-      "ops": 1.62,
-      "remarkMaint": "",
-      "remarkGen": "",
-      "dtRows": [
-        {
-          "stop": "6,00",
-          "start": "6,20",
-          "dur": 0.33,
-          "desc": "",
-          "code": "672",
-          "delayDesJPC": "Overshift",
-          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
-        },
-        {
-          "stop": "6,20",
-          "start": "7,00",
-          "dur": 0.67,
-          "desc": "",
-          "code": "672",
-          "delayDesJPC": "Overshift",
-          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
-        },
-        {
-          "stop": "8,08",
-          "start": "8,10",
-          "dur": 0.03,
-          "desc": "",
-          "code": "847",
-          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
-          "descriptions": "Delay karena Belt keluar dari track seharusnya"
-        },
-        {
-          "stop": "8,23",
-          "start": "8,24",
-          "dur": 0.02,
-          "desc": "",
-          "code": "847",
-          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
-          "descriptions": "Delay karena Belt keluar dari track seharusnya"
-        },
-        {
-          "stop": "8,24",
-          "start": "9,09",
-          "dur": 0.75,
-          "desc": "",
-          "code": "861",
-          "delayDesJPC": "",
-          "descriptions": "Chain feeder adjust"
-        },
-        {
-          "stop": "9,25",
-          "start": "18,00",
-          "dur": 8.58,
-          "desc": "Ganti rantai 5 link",
-          "code": "861",
-          "delayDesJPC": "",
-          "descriptions": "Chain feeder adjust"
-        }
-      ],
-      "haulingDtRows": [
-        {
-          "stop": "6,00",
-          "start": "6,30",
-          "dur": 0.5,
-          "desc": "",
-          "code": "739",
-          "deskripsi": "Other Ops",
-          "digunakanSaat": "Delay lain-lain"
-        },
-        {
-          "stop": "12,00",
-          "start": "13,00",
-          "dur": 1,
-          "desc": "",
-          "code": "739",
-          "deskripsi": "Other Ops",
-          "digunakanSaat": "Delay lain-lain"
-        },
-        {
-          "stop": "17,50",
-          "start": "18,00",
-          "dur": 0.17,
-          "desc": "",
-          "code": "739",
-          "deskripsi": "Other Ops",
-          "digunakanSaat": "Delay lain-lain"
-        }
-      ],
-      "savedAt": "2026-05-14T01:16:58.426Z"
-    },
-    "B": {
-      "date": "2026-05-13",
-      "shift": "B",
-      "pit": "",
-      "seam": "",
-      "bwStart": 3350865.25,
-      "bwStop": 3357890.5,
-      "tonnage": 7025.25,
-      "tph": 784.07,
-      "bwRows": [
-        {
-          "source": "J7PLK48",
-          "bwStart": 3350865.25,
-          "bwStop": 3357890.5,
-          "tonnage": 7025.25,
-          "tph": 784.07,
-          "jam": ""
-        }
-      ],
-      "hauling": 7209.58,
-      "source": "PLK48",
-      "bsRows": [
-        {
-          "hauling": 7209.58,
-          "source": "PLK48",
-          "note": "TBCT 2 NORTH 2"
-        }
-      ],
-      "supvFP": "SUTRAN HENDRA",
-      "supvCR": "",
-      "ewh": 12,
-      "stb": 1.84,
-      "bd": 1.2,
-      "ops": 8.96,
-      "remarkMaint": "",
-      "remarkGen": "",
-      "dtRows": [
-        {
-          "stop": "18,00",
-          "start": "18,10",
-          "dur": 0.17,
-          "desc": "",
-          "code": "672",
-          "delayDesJPC": "Overshift",
-          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
-        },
-        {
-          "stop": "18,10",
-          "start": "18,40",
-          "dur": 0.5,
-          "desc": "",
-          "code": "672",
-          "delayDesJPC": "Overshift",
-          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
-        },
-        {
-          "stop": "20,56",
-          "start": "21,25",
-          "dur": 0.48,
-          "desc": "",
-          "code": "861",
-          "delayDesJPC": "",
-          "descriptions": "Chain feeder adjust"
-        },
-        {
-          "stop": "0,00",
-          "start": "1,00",
-          "dur": 1,
-          "desc": "",
-          "code": "673",
-          "delayDesJPC": "Break (Rest & Prayer)",
-          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
-        },
-        {
-          "stop": "3,50",
-          "start": "4,33",
-          "dur": 0.72,
-          "desc": "",
-          "code": "861",
-          "delayDesJPC": "",
-          "descriptions": "Chain feeder adjust"
-        },
-        {
-          "stop": "5,50",
-          "start": "6,00",
-          "dur": 0.17,
-          "desc": "",
-          "code": "672",
-          "delayDesJPC": "Overshift",
-          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
-        }
-      ],
-      "haulingDtRows": [
-        {
-          "stop": "18,00",
-          "start": "18,40",
-          "dur": 0.67,
-          "desc": "",
-          "code": "739",
-          "deskripsi": "Other Ops",
-          "digunakanSaat": "Delay lain-lain"
-        },
-        {
-          "stop": "0,00",
-          "start": "1,00",
-          "dur": 1,
-          "desc": "",
-          "code": "739",
-          "deskripsi": "Other Ops",
-          "digunakanSaat": "Delay lain-lain"
-        },
-        {
-          "stop": "5,50",
-          "start": "6,00",
-          "dur": 0.17,
-          "desc": "",
-          "code": "739",
-          "deskripsi": "Other Ops",
-          "digunakanSaat": "Delay lain-lain"
-        }
-      ],
-      "savedAt": "2026-05-14T01:21:57.652Z"
-    }
-  },
   "2026-05-12": {
     "A": {
       "date": "2026-05-12",
@@ -3174,6 +2926,254 @@
         }
       ],
       "savedAt": "2026-05-14T01:06:42.518Z"
+    }
+  },
+  "2026-05-13": {
+    "A": {
+      "date": "2026-05-13",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3349462.5,
+      "bwStop": 3350865.25,
+      "tonnage": 1402.75,
+      "tph": 865.9,
+      "bwRows": [
+        {
+          "source": "J6 PLK48",
+          "bwStart": 3349462.5,
+          "bwStop": 3350865.25,
+          "tonnage": 1402.75,
+          "tph": 865.9,
+          "jam": ""
+        }
+      ],
+      "hauling": 5197.44,
+      "source": "PLK48",
+      "bsRows": [
+        {
+          "hauling": 5197.44,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        }
+      ],
+      "supvFP": "SATRIA",
+      "supvCR": "BAHRIANI",
+      "ewh": 12,
+      "stb": 1,
+      "bd": 9.38,
+      "ops": 1.62,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,20",
+          "dur": 0.33,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "6,20",
+          "start": "7,00",
+          "dur": 0.67,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "8,08",
+          "start": "8,10",
+          "dur": 0.03,
+          "desc": "",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "8,23",
+          "start": "8,24",
+          "dur": 0.02,
+          "desc": "",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "8,24",
+          "start": "9,09",
+          "dur": 0.75,
+          "desc": "",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        },
+        {
+          "stop": "9,25",
+          "start": "18,00",
+          "dur": 8.58,
+          "desc": "Ganti rantai 5 link",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "6,00",
+          "start": "6,30",
+          "dur": 0.5,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12,00",
+          "start": "13,00",
+          "dur": 1,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17,50",
+          "start": "18,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-14T01:16:58.426Z"
+    },
+    "B": {
+      "date": "2026-05-13",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3350865.25,
+      "bwStop": 3357890.5,
+      "tonnage": 7025.25,
+      "tph": 784.07,
+      "bwRows": [
+        {
+          "source": "J7PLK48",
+          "bwStart": 3350865.25,
+          "bwStop": 3357890.5,
+          "tonnage": 7025.25,
+          "tph": 784.07,
+          "jam": ""
+        }
+      ],
+      "hauling": 7209.58,
+      "source": "PLK48",
+      "bsRows": [
+        {
+          "hauling": 7209.58,
+          "source": "PLK48",
+          "note": "TBCT 2 NORTH 2"
+        }
+      ],
+      "supvFP": "SUTRAN HENDRA",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 1.84,
+      "bd": 1.2,
+      "ops": 8.96,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,10",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "18,10",
+          "start": "18,40",
+          "dur": 0.5,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        },
+        {
+          "stop": "20,56",
+          "start": "21,25",
+          "dur": 0.48,
+          "desc": "",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "3,50",
+          "start": "4,33",
+          "dur": 0.72,
+          "desc": "",
+          "code": "861",
+          "delayDesJPC": "",
+          "descriptions": "Chain feeder adjust"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18,00",
+          "start": "18,40",
+          "dur": 0.67,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "0,00",
+          "start": "1,00",
+          "dur": 1,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "5,50",
+          "start": "6,00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-14T01:21:57.652Z"
     }
   },
   "2026-05-14": {
@@ -3933,6 +3933,172 @@
         }
       ],
       "savedAt": "2026-05-16T10:10:30.095Z"
+    },
+    "B": {
+      "date": "2026-05-16",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3387750.75,
+      "bwStop": 3390268.75,
+      "tonnage": 8623.5,
+      "tph": 927.26,
+      "bwRows": [
+        {
+          "source": "PELIKAN 48 J.07",
+          "bwStart": 3387750.75,
+          "bwStop": 3390268.75,
+          "tonnage": 2518,
+          "tph": 270.75,
+          "jam": ""
+        },
+        {
+          "source": "PELIKAN 48 J.08",
+          "bwStart": 3390268.75,
+          "bwStop": 3394325.25,
+          "tonnage": 4056.5,
+          "tph": 436.18,
+          "jam": ""
+        },
+        {
+          "source": "PELIKAN 48 J.06",
+          "bwStart": 3394325.25,
+          "bwStop": 3396374.25,
+          "tonnage": 2049,
+          "tph": 220.32,
+          "jam": ""
+        }
+      ],
+      "hauling": 7386.12,
+      "source": "PELIKAN 48",
+      "bsRows": [
+        {
+          "hauling": 7386.12,
+          "source": "PELIKAN 48",
+          "note": "TBCT 1 NORTH 1"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 2.7,
+      "bd": 0,
+      "ops": 9.3,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18:00",
+          "start": "18:10",
+          "dur": 0.17,
+          "desc": "P5M",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "18:10",
+          "start": "18:40",
+          "dur": 0.5,
+          "desc": "P2H",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "18:40",
+          "start": "19:00",
+          "dur": 0.33,
+          "desc": "",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "21:45",
+          "start": "22:00",
+          "dur": 0.25,
+          "desc": "",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "00:00",
+          "start": "01:00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "03:20",
+          "start": "03:27",
+          "dur": 0.12,
+          "desc": "",
+          "code": "671",
+          "delayDesJPC": "Stand By JPC - Ganti Produk",
+          "descriptions": "Delay dikarenakan penggantian kualitas product"
+        },
+        {
+          "stop": "05:11",
+          "start": "05:16",
+          "dur": 0.08,
+          "desc": "SCREEN BLOCK",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "05:45",
+          "start": "06:00",
+          "dur": 0.25,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18:00",
+          "start": "18:10",
+          "dur": 0.17,
+          "desc": "P5M",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "18:10",
+          "start": "18:35",
+          "dur": 0.42,
+          "desc": "P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "00:00",
+          "start": "01:00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "05:45",
+          "start": "06:00",
+          "dur": 0.25,
+          "desc": "SHIFT CHANGE",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-16T22:10:40.505Z"
     }
   }
 }
