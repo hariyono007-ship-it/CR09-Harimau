@@ -4100,5 +4100,144 @@
       ],
       "savedAt": "2026-05-16T22:10:40.505Z"
     }
+  },
+  "2026-05-17": {
+    "A": {
+      "date": "2026-05-17",
+      "shift": "A",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3396374.23,
+      "bwStop": 3403320.25,
+      "tonnage": 6946.02,
+      "tph": 708.06,
+      "bwRows": [
+        {
+          "source": "PELIKAN 48",
+          "bwStart": 3396374.23,
+          "bwStop": 3403320.25,
+          "tonnage": 6946.02,
+          "tph": 708.06,
+          "jam": ""
+        }
+      ],
+      "hauling": 7045.9400000000005,
+      "source": "PELIKAN 48, PINANG LGHS",
+      "bsRows": [
+        {
+          "hauling": 1542.38,
+          "source": "PELIKAN 48",
+          "note": "TBCT 1 NORTH 1"
+        },
+        {
+          "hauling": 5503.56,
+          "source": "PINANG LGHS",
+          "note": "TBCT 1 SOUTH 1 A"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 2.14,
+      "bd": 0.05,
+      "ops": 9.81,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "06:00",
+          "start": "06:05",
+          "dur": 0.08,
+          "desc": "P5M",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "06:05",
+          "start": "06:48",
+          "dur": 0.72,
+          "desc": "P2H",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "08:50",
+          "start": "09:00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "647",
+          "delayDesJPC": "Stand By JPC - Belt Tracking",
+          "descriptions": "Saat terjadi belt tracking karena hujan, dll"
+        },
+        {
+          "stop": "12:00",
+          "start": "13:00",
+          "dur": 1,
+          "desc": "",
+          "code": "673",
+          "delayDesJPC": "Break (Rest & Prayer)",
+          "descriptions": "Jam istirahat (12:00-13:00 atau 00:00-01:00)"
+        },
+        {
+          "stop": "17:25",
+          "start": "17:28",
+          "dur": 0.05,
+          "desc": "",
+          "code": "847",
+          "delayDesJPC": "Repair (Scheduled) - Belt Tracking / Trouble Mechanical - Belt Tracking",
+          "descriptions": "Delay karena Belt keluar dari track seharusnya"
+        },
+        {
+          "stop": "17:50",
+          "start": "18:00",
+          "dur": 0.17,
+          "desc": "",
+          "code": "672",
+          "delayDesJPC": "Overshift",
+          "descriptions": "Pergantian dari day shift ke night shift (begitu pun sebaliknya)"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "06:00",
+          "start": "06:10",
+          "dur": 0.17,
+          "desc": "P5M",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "06:10",
+          "start": "06:48",
+          "dur": 0.63,
+          "desc": "P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "12:00",
+          "start": "13:00",
+          "dur": 1,
+          "desc": "REST TIME",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "17:45",
+          "start": "18:00",
+          "dur": 0.25,
+          "desc": "SHIFT CHANGE",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-17T09:56:22.607Z"
+    }
   }
 }
