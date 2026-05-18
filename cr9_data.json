@@ -4495,6 +4495,125 @@
         }
       ],
       "savedAt": "2026-05-18T09:59:14.827Z"
+    },
+    "B": {
+      "date": "2026-05-18",
+      "shift": "B",
+      "pit": "",
+      "seam": "",
+      "bwStart": 3416058,
+      "bwStop": 3418513.5,
+      "tonnage": 2455.5,
+      "tph": 669.07,
+      "bwRows": [
+        {
+          "source": "PLGHS J.08",
+          "bwStart": 3416058,
+          "bwStop": 3418513.5,
+          "tonnage": 2455.5,
+          "tph": 669.07,
+          "jam": ""
+        }
+      ],
+      "hauling": 3330.58,
+      "source": "PELIKAN 48, PLGHS",
+      "bsRows": [
+        {
+          "hauling": 2609.56,
+          "source": "PELIKAN 48",
+          "note": "TBCT 1 NORTH 1 A"
+        },
+        {
+          "hauling": 721.02,
+          "source": "PLGHS",
+          "note": "TBCT 1 SOUTH 1A"
+        }
+      ],
+      "supvFP": "",
+      "supvCR": "",
+      "ewh": 12,
+      "stb": 8.33,
+      "bd": 0,
+      "ops": 3.67,
+      "remarkMaint": "",
+      "remarkGen": "",
+      "dtRows": [
+        {
+          "stop": "18:00",
+          "start": "18:13",
+          "dur": 0.22,
+          "desc": "P5M",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "18:13",
+          "start": "18:42",
+          "dur": 0.48,
+          "desc": "P2H",
+          "code": "699",
+          "delayDesJPC": "",
+          "descriptions": "Delay-delay yang berkaitan dengan operation yang tidak tercover delay code yang ada"
+        },
+        {
+          "stop": "22:22",
+          "start": "04:01",
+          "dur": 5.65,
+          "desc": "",
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
+        },
+        {
+          "stop": "04:01",
+          "start": "06:00",
+          "dur": 1.98,
+          "desc": "",
+          "code": "705",
+          "delayDesJPC": "Unsafe Condition - Heavy Rain",
+          "descriptions": "Delay yang diakibatkan oleh hujan deras"
+        }
+      ],
+      "haulingDtRows": [
+        {
+          "stop": "18:00",
+          "start": "18:20",
+          "dur": 0.33,
+          "desc": "P5M",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "18:20",
+          "start": "18:39",
+          "dur": 0.32,
+          "desc": "P2H",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "22:22",
+          "start": "04:00",
+          "dur": 5.63,
+          "desc": "HEAVY RAIN",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        },
+        {
+          "stop": "05:47",
+          "start": "06:00",
+          "dur": 0.22,
+          "desc": "HEAVY RAIN",
+          "code": "739",
+          "deskripsi": "Other Ops",
+          "digunakanSaat": "Delay lain-lain"
+        }
+      ],
+      "savedAt": "2026-05-18T22:17:59.350Z"
     }
   }
 }
